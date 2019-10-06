@@ -1,0 +1,131 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.steps {
+  width: 100%;
+  background: $black;
+  display: flex;
+  justify-content: space-evenly;
+
+  @media screen and (max-width: 500px) { 
+    display: none;
+  } 
+  
+  &__left {
+    width: width(337px, $desktop);
+    margin-left: width(50px, $desktop);
+
+    &-head {
+      font-family: "FuturaDemiC";
+      font-size: width(15px, $desktop);
+      line-height: width(21px, $desktop);
+      text-transform: uppercase;
+
+      color: $white;
+    }
+
+    &-heading {
+      display: flex;
+
+      &-name {
+        font-family: "Yeseva One";
+        font-style: normal;
+        font-weight: normal;
+        font-size: width(27px, $desktop);
+        line-height: width(37px, $desktop);
+        text-transform: uppercase;
+        color: $yellow;
+      }
+
+      &-stick {
+        width: width(92px, $desktop);
+        max-width: 92px;
+        height: 1px;
+        background: $yellow;
+      }
+    }
+
+    &-num {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: width(18px, $desktop);
+      line-height: width(25px, $desktop);
+      text-transform: uppercase;
+      color: $white;
+
+      &-heading {
+        font-family: "Yeseva One";
+        font-style: normal;
+        font-weight: normal;
+        font-size: width(15px, $desktop);
+        line-height: width(23px, $desktop);
+        text-transform: uppercase;
+
+        color: $yellow;
+      }
+    }
+
+    &-p {
+      font-family: "FuturaBookC";
+      font-size: width(15px, $desktop);
+      line-height: width(25px, $desktop);
+
+      color: $white;
+    }
+  }
+  &__arrows {
+		margin-top: width(79.64px, $desktop);
+		display: flex;
+
+		&-prev {
+			width: width(41.46px, $desktop);
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		&-next {
+			width: width(41.46px, $desktop);
+			transform: rotate(-180deg);
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		&-dot {
+			background: $white;
+			opacity: 0.3;
+			width: width(10px, $desktop);
+			height: width(10px, $desktop);
+			border-radius: 50%;
+			margin: 0 width(8px, $desktop);
+
+			&:hover {
+        background: $yellow;
+        opacity: 1;
+			}
+			&_selected {
+				opacity: 1;
+				background: $white;
+				width: width(10px, $desktop);
+				height: width(10px, $desktop);
+        border-radius: 50%;
+        margin: 0 width(8px, $desktop);
+
+				&:hover {
+					background: $yellow;
+				}
+			}
+		}
+  }
+  
+  &__img {
+    width: width(765px, $desktop);
+    height: width(376.64px, $desktop);
+    max-width: 765px;
+    max-height: 376.64px;
+  }
+}

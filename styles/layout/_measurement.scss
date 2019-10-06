@@ -1,0 +1,98 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.measurement {
+  background: $white;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  overflow: hidden;
+
+  @media screen and (max-width: 500px) { 
+    display: none;
+  } 
+  
+  &__stages {
+    width: width(800px, $desktop);
+    height: width(645px, $desktop);
+
+    background-image: url(../../assets/images/building.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-circle {
+      position: relative;
+      width: width(636.12px, $desktop);
+      height: width(636.12px, $desktop);
+      top: 6%;
+      left: -20%;
+      border-radius: 50%;
+      background-image: radial-gradient(
+        transparent 69%,
+        $yellow 70%,
+        transparent 50%
+			);
+
+    }
+
+    &-div_1 {
+      position: relative;
+      top: -95%;
+      left: 30%;
+      display: flex;
+      align-items: center;
+		}
+		
+		&-div_2 {
+      position: relative;
+      top: -95%;
+      left: 46%;
+      display: flex;
+      align-items: center;
+		}
+		
+		&-div_3 {
+      position: relative;
+      top: -90%;
+      left: 51%;
+      display: flex;
+      align-items: center;
+		}
+		
+		&-div_4 {
+      position: relative;
+      top: -85%;
+      left: 48%;
+      display: flex;
+      align-items: center;
+		}
+		
+    &-div-circle {
+      width: width(41.46px, $desktop);
+      height: width(41.46px, $desktop);
+
+      background: $yellow;
+      border-radius: 50%;
+      border: 2vw solid $white;
+      text-align: center;
+      padding: 1%;
+      box-sizing: content-box;
+
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: width(18px, $desktop);
+      line-height: width(25px, $desktop);
+      color: $white;
+    }
+	}
+	
+	&__wrapper {
+		width: width(509px, $desktop);
+	}
+
+	&__save {
+		display: flex;
+
+	}
+}

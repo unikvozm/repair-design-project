@@ -1,0 +1,133 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.design {
+	width: 100%;
+  height: width(1020px, $desktop);
+  
+  @media screen and (max-width: 500px) { 
+    height: 100%;
+  } 
+
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #ffffff 48%,
+    $black 48%,
+    $black 100%
+  );
+
+  &__heading {
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: 900;
+    font-size: width(20px, $desktop);
+    line-height: width(28px, $desktop);
+    padding-top: width(112.47px, $desktop);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #181818;
+  }
+
+  &__picto {
+    display: flex;
+    width: width(114px, $desktop);
+    margin: width(12.89px, $desktop) auto width(24.11px, $desktop);
+    align-items: center;
+    justify-content: space-between;
+
+    &-stick {
+      background: $yellow;
+      width: width(32px, $desktop);
+      height: 1.5px;
+    }
+  }
+
+  &__p {
+    font-family: "FuturaBookC";
+    font-size: width(20px, $desktop);
+    line-height: width(27px, $desktop);
+    text-align: center;
+    padding-bottom: width(39px, $desktop);
+
+    color: #363636;
+  }
+
+  &__blocks {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 500px) { 
+      display: block;
+      height: 100%;
+    } 
+  }
+
+  &__block {
+    margin: 0 width(15px, $desktop);
+
+    &-img {
+      width: width(392px, $desktop);
+      max-width: width(392px, $desktop);
+      height: width(421px, $desktop);
+      max-height: 421px;
+    }
+
+    &-txt {
+      background: $white;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+      width: width(330px, $desktop);
+      position: relative;
+      padding-left: width(31px, $desktop);
+      top: width(-115px, $desktop);
+      left: width(30px, $desktop);
+    }
+
+    &-heading {
+      padding-top: width(25px, $desktop);
+      padding-bottom: width(13px, $desktop);
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: width(18px, $desktop);
+      line-height: width(25px, $desktop);
+
+      color: #363636;
+    }
+
+    &-li {
+      list-style: inside;
+      font-family: "FuturaBookC";
+      font-size: width(15px, $desktop);
+      line-height: width(25px, $desktop);
+
+			color: #959595;
+			
+			&:last-child {
+				padding-bottom: width(57px, $desktop);
+			}
+    }
+
+    &-price {
+      background: $yellow;
+      color: $white;
+      font-family: "Yeseva One";
+      font-weight: normal;
+      font-size: width(18px, $desktop);
+      line-height: width(25px, $desktop);
+			text-transform: uppercase;
+			width: width(228px, $desktop);
+			height: width(54px, $desktop);
+			max-width: 228px;
+			max-height: 54px;
+			position: relative;
+			padding-top: width(17px, $desktop);
+			padding-left: width(33px, $desktop);
+			box-sizing: border-box; 
+			top: width(-145px, $desktop);
+			left: width(30px, $desktop);
+			box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
+    }
+  }
+}

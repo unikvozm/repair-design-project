@@ -1,0 +1,3 @@
+@function width($originalWidth, $screen) {
+	@return $originalWidth * 100vw / $screen;
+}

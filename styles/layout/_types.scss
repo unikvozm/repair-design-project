@@ -1,0 +1,80 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.types {
+  width: 100%;
+  max-width: $desktop;
+  background: $white;
+
+  &__heading {
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(20px, $desktop);
+    line-height: width(28px, $desktop);
+    padding-top: width(170px, $desktop);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #181818;
+  }
+
+  &__picto {
+    display: flex;
+    width: width(116px, $desktop);
+    margin: 10px auto;
+    align-items: center;
+    justify-content: space-between;
+
+    &-stick {
+      background: $yellow;
+      width: width(32px, $desktop);
+      height: 1.5px;
+    }
+  }
+
+  &__block {
+    width: width(1236px, $desktop);
+    max-width: 1236px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+
+    @media screen and (max-width: 500px) { 
+      display: block;
+    } 
+
+    &-img {
+      width: width(392px, $desktop);
+      max-width: 392px;
+      height: width(421px, $desktop);
+      max-height: 421px;
+    }
+
+    &-text {
+      background: $white;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+      width: width(330px, $desktop);
+      height: width(286px, $desktop);
+    }
+
+    &-price {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: width(18px, $desktop);
+      line-height: width(25px, $desktop);
+      text-transform: uppercase;
+      color: $white;
+      background: $yellow;
+      width: width(228px, $desktop);
+      max-width: 228px;
+      height: width(54px, $desktop);
+      max-height: 54px;
+      box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+      text-align: center;
+      padding-top: 4%;
+      margin-bottom: 15%;
+    }
+  }
+}

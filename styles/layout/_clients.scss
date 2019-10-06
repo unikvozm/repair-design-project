@@ -1,0 +1,106 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.clients {
+  width: 100%;
+  background-image: url("../../assets/images/clients.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 500px) { 
+    display: none;
+  } 
+
+  &__heading {
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(20px, $desktop);
+    line-height: width(28px, $desktop);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #181818;
+  }
+  &__picto {
+    display: flex;
+    width: width(116px, $desktop);
+    margin: 10px auto;
+    align-items: center;
+    justify-content: space-between;
+
+    &-img {
+    }
+
+    &-stick {
+      background: $yellow;
+      width: width(32px, $desktop);
+      height: 1.5px;
+    }
+  }
+  &__p {
+    font-family: "FuturaBookC";
+    font-size: width(20px, $desktop);
+    line-height: width(27px, $desktop);
+    text-align: center;
+
+    color: #363636;
+  }
+  &__reviews {
+    display: flex;
+    width: width(1236px, $desktop);
+    max-width: 1236px;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__review {
+    width: width(376px, $desktop);
+    max-width: 376px;
+
+    background: $white;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    padding: width(20px, $desktop);
+  }
+
+  &__details {
+    display: flex;
+    width: width(293.75px, $desktop);
+    max-width: 293.75px;
+    height: width(54.03px, $desktop);
+    max-height: 54.03px;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(17px, $desktop);
+		line-height: width(24px, $desktop);
+		color: $white;
+		background: $yellow;
+  }
+
+  &__img {
+  }
+  &__name {
+  }
+
+  &__size {
+  }
+  &__size-icon {
+  }
+  &__time {
+  }
+  &__time-icon {
+  }
+  &__txt {
+    font-family: "FuturaBookC";
+font-size: width(15px, $desktop);
+line-height: width(27px, $desktop);
+
+
+color: #959595;
+  }
+}

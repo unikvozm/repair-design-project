@@ -1,0 +1,69 @@
+@import '../abstracts/functions';
+@import '../abstracts/variables';
+
+.button {
+	background-color: $yellow;
+	color: $white;
+	font-family: "FuturaDemiC";
+	font-size: width(13px, $desktop);
+	line-height: width(15px, $desktop);
+	text-transform: uppercase;
+	cursor: pointer;
+	border: $yellow;
+	box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+	border-radius: 2px;
+
+	&:hover {
+		background-color: darken($yellow, 20%);
+	}
+
+	@media screen and (max-width: 500px) { 
+		font-size: width(13px, $mobile);
+		line-height: width(15px, $mobile);
+		width: width(338.61px, $mobile);
+		display: block;
+		padding: width(19px, $mobile) auto;
+	} 
+}
+
+.header__call {
+	width: width(161px, $desktop);
+	height: width(37px, $desktop);
+
+	@media screen and (max-width: 500px) { 
+		display: none;
+	}
+}
+
+.home__calculate {
+	position: relative;
+	top: width(248px, $desktop);
+	left: width(60px, $desktop);
+	width: width(207px, $desktop);
+	height: width(51px, $desktop);
+	box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+
+	@media screen and (max-width: 500px) { 
+		line-height: width(15px, $mobile);
+		width: width(338.61px, $mobile);
+		height: width(51px, $mobile);
+	}
+}
+
+.home__submit {
+	position: relative;
+	top: width(248px, $desktop);
+	left: width(80px, $desktop);
+	width: width(207px, $desktop);
+	height: width(51px, $desktop);
+	border: 1px solid $white;
+	background-color: transparent;
+
+	@media screen and (max-width: 500px) { 
+		line-height: width(15px, $mobile);
+		width: width(338.61px, $mobile);
+		height: width(51px, $mobile);
+		left: width(17px, $mobile);
+		top: width(90px, $mobile);
+	}
+}

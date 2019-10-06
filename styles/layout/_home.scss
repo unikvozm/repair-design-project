@@ -1,0 +1,152 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.home {
+  max-width: $desktop;
+  width: 100%;
+  height: width(838px, $desktop);
+  max-height: 838px;
+  background: $black;
+  overflow: hidden;
+
+  @media screen and (max-width: 500px) { 
+    height: 100%;
+ 
+  } 
+
+  &__instagram {
+    position: absolute;
+    width: width(82px, $desktop);
+    max-width: 82px;
+    height: width(82px, $desktop);
+    max-height: 82px;
+
+    transform: rotate(90deg);
+
+    @media screen and (max-width: 500px) { 
+      display: none;
+    } 
+  }
+
+  &__link {
+    font-family: "FuturaDemiC";
+    font-size: width(14px, $desktop);
+    line-height: width(16px, $desktop);
+    text-align: center;
+    background: $black;
+    color: $yellow;
+    text-decoration: none;
+    position: relative;
+    top: width(31px, $desktop);
+    left: width(284px, $desktop);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__stick {
+    background-color: $yellow;
+    width: width(51px, $desktop);
+    height: 1px;
+    position: relative;
+    top: width(23px, $desktop);
+    left: width(380px, $desktop);
+  }
+
+  &__img {
+    background-image: url("../../assets/images/Group\ 7.png");
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    left: width(82px, $desktop);
+    background-repeat: no-repeat;
+    width: width(1356px, $desktop);
+    max-width: 1356px;
+
+
+    @media screen and (max-width: 500px) { 
+      left: 0;
+      width: 100%;
+      height: 476px;
+    } 
+  }
+
+  &__heading {
+    width: width(600px, $desktop);
+    max-width: 600px;
+    position: relative;
+    top: width(194px, $desktop);
+    left: width(60px, $desktop);
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(40px, $desktop);
+    line-height: width(53px, $desktop);
+    text-transform: uppercase;
+
+    color: $white;
+
+    &--yellow {
+      color: $yellow;
+    }
+
+    @media screen and (max-width: 500px) { 
+      font-size: 23px;
+      line-height: 132.83%;
+      width: 339px;
+      padding-right: 20px;
+    } 
+    
+  }
+
+  &__p {
+    position: relative;
+    top: width(208px, $desktop);
+    left: width(60px, $desktop);
+    width: width(504px, $desktop);
+    max-width: 504px;
+
+    font-family: "FuturaBookC";
+    font-size: width(22px, $desktop);
+    line-height: width(30px, $desktop);
+
+    color: $white;
+
+    @media screen and (max-width: 500px) { 
+      font-size: 18px;
+      line-height: 135.84%;
+      width: 339px;
+      padding: 20px 20px 20px 0;
+    } 
+  }
+
+  &__scroll-link {
+		display: block;
+		width: width(247px, $desktop);
+		height: width(97px, $desktop);
+		position: relative;
+		top: -49px;
+		padding-top: width(34px, $desktop);
+		padding-left: width(48px, $desktop);
+		background: $black;
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(14px, $desktop);
+    line-height: width(19px, $desktop);
+		text-transform: uppercase;
+		text-decoration: none;
+
+		color: $white;
+		
+		&:hover {
+			color: $yellow;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 500px) { 
+      display: none;
+    } 
+  }
+}

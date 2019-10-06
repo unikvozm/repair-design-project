@@ -1,0 +1,121 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.team {
+  width: 100%;
+
+  background-image: linear-gradient(
+    to bottom,
+    $black,
+    $black 46%,
+    $white 46%,
+    $white 100%
+  );
+
+  &__heading {
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(20px, $desktop);
+    line-height: width(28px, $desktop);
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    padding-top: width(95.15px, $desktop);
+  }
+
+  &__picto {
+    display: flex;
+    width: width(116px, $desktop);
+    margin: 10px auto;
+    align-items: center;
+    justify-content: space-between;
+
+    &-img {
+    }
+
+    &-stick {
+      background: $yellow;
+      width: width(32px, $desktop);
+      height: 1.5px;
+    }
+  }
+
+  &__p {
+    font-family: "FuturaBookC";
+    font-size: width(20px, $desktop);
+    line-height: width(27px, $desktop);
+    text-align: center;
+    margin-bottom: width(38.53px, $desktop);
+
+    color: $white;
+  }
+
+  &__teams {
+    width: width(1063.24px, $desktop);
+    max-width: 1063.23px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @media screen and (max-width: 500px) { 
+      display: block;
+    } 
+  }
+
+  &__block {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    width: width(70px, $desktop);
+    height: width(70px, $desktop);
+    max-width: 70px;
+    max-height: 70px;
+    top: -9%;
+    left: -13%;
+  }
+
+  &__photo {
+    width: width(272.24px, $desktop);
+    height: width(357.63px, $desktop);
+    max-width: 272.24px;
+    max-height: 357.63px;
+  }
+  &__txt {
+  }
+
+  &__name {
+  }
+
+  &__profession {
+  }
+  &__experience {
+  }
+
+  &__stick--btm {
+    background: $yellow;
+    width: width(32px, $desktop);
+    height: 1.5px;
+    margin: 5% auto 2%;
+
+    @media screen and (max-width: 500px) { 
+      display: none;
+    } 
+  }
+
+  &__p--btm {
+    font-family: "FuturaBookC";
+    font-size: width(20px, $desktop);
+    line-height: width(34px, $desktop);
+		text-align: center;
+		padding-bottom: width(88.59px, $desktop);
+
+    color: #363636;
+
+    @media screen and (max-width: 500px) { 
+      display: none;
+    } 
+  }
+}

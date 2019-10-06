@@ -1,0 +1,78 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  background: $black;
+  max-width: $desktop;
+  width: 100%;
+  padding: width(24px, $desktop) width(100px, $desktop) width(22px, $desktop)
+    width(82px, $desktop);
+  text-transform: uppercase;
+  font-size: width(14px, $desktop);
+  line-height: width(16px, $desktop);
+
+  @media screen and (max-width: 500px) {
+    width: 100vw;
+    font-size: 12px;
+    line-height: 14px;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    margin-left: width(95.47px, $desktop);
+
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    font-family: "FuturaDemiC";
+    color: $yellow;
+  }
+
+  &__tel {
+    color: $yellow;
+    font-family: "FuturaDemiC";
+
+    @media screen and (max-width: 500px) {
+      color: $white;
+    }
+  }
+
+  &__call {
+    @media screen and (max-width: 500px) {
+      display: none;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: width(581.43px, $desktop);
+  max-width: 581.43px;
+
+  &__item {
+    display: block;
+    font-family: "FuturaBookC";
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+
+    &--active {
+      text-decoration: none;
+      color: $yellow;
+    }
+
+    &:hover {
+      color: $yellow;
+      text-decoration: underline;
+    }
+  }
+}

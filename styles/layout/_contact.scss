@@ -1,0 +1,32 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.contact {
+  width: 100%;
+  background-image: url("./../../assets/images/contact-section.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 500px) { 
+    background: #181818;
+  } 
+  &__address {
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(20px, $desktop);
+    line-height: width(28px, $desktop);
+    text-align: center;
+    text-transform: uppercase;
+    color: $yellow;
+  }
+
+  &__map {
+    display: block;
+    width: width(925px, $desktop);
+    max-width: 925px;
+    height: width(465px, $desktop);
+    max-height: width(465px, $desktop);
+    margin: 2vw auto 0;
+  }
+}

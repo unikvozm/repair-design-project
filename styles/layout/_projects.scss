@@ -1,0 +1,194 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.projects {
+  width: 100%;
+  max-width: 1440px;
+  background: $black;
+  overflow: hidden;
+
+  &__article {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media screen and (max-width: 500px) { 
+      display: block;
+    } 
+    &-left {
+      width: width(450px, $desktop);
+      max-width: 450px;
+      margin-left: width(100px, $desktop);
+      margin-right: width(50px, $desktop);
+    }
+  }
+
+  &__heading {
+    display: flex;
+
+    &-name {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: width(27px, $desktop);
+      line-height: width(37px, $desktop);
+      letter-spacing: -0.07em;
+      text-transform: uppercase;
+      color: $yellow;
+    }
+
+    &-stick {
+      width: width(92px, $desktop);
+      max-width: 92px;
+      height: 1px;
+      background: $yellow;
+
+      @media screen and (max-width: 500px) { 
+        display: none;
+      } 
+    }
+  }
+
+  &__p {
+    font-family: "FuturaBookC";
+    font-size: width(18px, $desktop);
+    line-height: width(29px, $desktop);
+    color: $white;
+  }
+
+  &__description {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+
+    &-heading {
+      font-family: "Yeseva One";
+      font-style: normal;
+      font-weight: normal;
+      font-size: width(18px, $desktop);
+      line-height: width(25px, $desktop);
+      text-transform: uppercase;
+      color: $yellow;
+    }
+
+    &-p {
+      font-family: "FuturaBookC";
+      font-size: width(15px, $desktop);
+      line-height: width(20px, $desktop);
+      color: $white;
+    }
+	}
+	
+	&__arrows {
+		margin-top: width(79.64px, $desktop);
+    display: flex;
+    
+    @media screen and (max-width: 500px) { 
+      display: none;
+    } 
+
+		&-prev {
+			width: width(41.46px, $desktop);
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		&-next {
+			width: width(41.46px, $desktop);
+			transform: rotate(-180deg);
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		&-circle {
+			background: $white;
+			opacity: 0.3;
+			width: width(10px, $desktop);
+			height: width(10px, $desktop);
+			border-radius: 50%;
+			margin: 0 width(8px, $desktop);
+
+			&:hover {
+        background: $yellow;
+        opacity: 1;
+			}
+			&_active {
+				opacity: 1;
+				background: $white;
+				width: width(10px, $desktop);
+				height: width(10px, $desktop);
+        border-radius: 50%;
+        margin: 0 width(8px, $desktop);
+
+				&:hover {
+					background: $yellow;
+				}
+			}
+		}
+	}
+
+  &__slider {
+    display: flex;
+    width: width(795px, $desktop);
+    padding-bottom: width(91px, $desktop);
+
+    &-img, &-img--desk{
+      margin-right: width(21px, $desktop);
+      width: width(679px, $desktop);
+    }
+    &-img--desk{
+      @media screen and (max-width: 500px) { 
+        display: none;
+      } 
+    }
+    &-icon {
+      position: relative;
+      width: width(54.72px, $desktop);
+      left: -83%;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.projects__nav {
+  margin-left: width(450px, $desktop);
+  display: flex;
+  justify-content: space-between;
+  width: width(623px, $desktop);
+  max-width: 623px;
+  margin-bottom: width(45.36px, $desktop);
+
+  @media screen and (max-width: 500px) { 
+    display: none;
+  } 
+
+  &-item {
+    display: block;
+    font-family: "Yeseva One";
+    font-weight: normal;
+    font-size: width(14px, $desktop);
+    line-height: width(19px, $desktop);
+    text-transform: uppercase;
+  }
+
+  &-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+
+    &_active {
+      text-decoration: underline;
+      color: $yellow;
+    }
+
+    &:hover {
+      color: $yellow;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.online {
+  width: 100%;
+  max-width: $desktop;
+  background: $white;
+  text-align: center;
+
+  &__wrapper-head {
+    background: $black;
+    width: 100%;
+    height: width(250px, $desktop);
+    max-height: 250px;
+  }
+
+  &__heading {
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(20px, $desktop);
+    line-height: width(28px, $desktop);
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__picto {
+    display: flex;
+    width: width(116px, $desktop);
+    margin: 10px auto;
+    align-items: center;
+    justify-content: space-between;
+
+    &-stick {
+      background: $yellow;
+      width: width(32px, $desktop);
+      height: 1.5px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    width: width(560px, $desktop);
+    height: width(315px, $desktop);
+    top: -10vw;
+  }
+
+  &__stick-btm {
+    background: $yellow;
+    width: width(32px, $desktop);
+    height: 1.5px;
+    margin: -8vw auto 2vw;
+  }
+
+  &__p {
+    font-family: "FuturaBookC";
+    font-size: width(20px, $desktop);
+    line-height: width(34px, $desktop);
+		text-align: center;
+		padding-bottom: width(91px, $desktop);
+
+    color: #363636;
+  }
+}

@@ -1,0 +1,107 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.styles {
+  width: 100%;
+  background-image: url("../../assets/images/styles.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: width(864px, $desktop);
+
+  @media screen and (max-width: 500px) { 
+    display: block;
+  } 
+
+  &__ul {
+    @media screen and (max-width: 500px) { 
+      display: none;
+    } 
+  }
+  &__block1 {
+    width: width(511px, $desktop);
+    margin-left: width(100px, $desktop);
+  }
+
+  &__block2 {
+    width: width(400px, $desktop);
+    max-width: 400px;
+
+  }
+  &__block3 {
+    width: width(400px, $desktop);
+    max-width: 400px;
+    @media screen and (max-width: 500px) { 
+      display: none;
+    } 
+  }
+
+  &__heading {
+    margin-top: width(137px, $desktop);
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: normal;
+    font-size: width(27px, $desktop);
+    line-height: width(37px, $desktop);
+    text-transform: uppercase;
+    color: $yellow;
+    margin-bottom: 10%;
+  }
+  &__li {
+    font-family: "Proxima Nova";
+    font-size: width(20px, $desktop);
+    line-height: width(34px, $desktop);
+
+    color: $white;
+
+    &_selected {
+      font-family: "Proxima Nova";
+      font-size: width(20px, $desktop);
+      line-height: width(34px, $desktop);
+
+      color: $yellow;
+      text-decoration: underline;
+    }
+  }
+
+  &__img_1 {
+    position: relative;
+    top: -4%;
+    width: width(354.81px, $desktop);
+    max-width: 353.81px;
+    height: width(556.86px, $desktop);
+    max-height: 556.86px;
+  }
+
+  &__img_2 {
+    position: relative;
+    top: 3%;
+    width: width(353.81px, $desktop);
+    max-width: 353.81px;
+    height: width(349.47px, $desktop);
+    max-height: 349.47px;
+    @media screen and (max-width: 500px) { 
+      display: none;
+    } 
+  }
+
+  &__img_3 {
+    position: relative;
+    top: -13%;
+    width: width(354px, $desktop);
+    height: width(275px, $desktop);
+    max-width: 354px;
+    max-height: 275px;
+  }
+
+  &__img_4 {
+    position: relative;
+    top: -7%;
+    width: width(353.81px, $desktop);
+    height: width(625.23px, $desktop);
+    max-width: 353.81px;
+    max-height: 625.23px;
+  }
+}
