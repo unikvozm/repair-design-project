@@ -7,125 +7,170 @@
   display: flex;
   justify-content: space-evenly;
 
-  @media screen and (max-width: 500px) { 
+  @media screen and (max-width: 425px) {
     display: none;
-  } 
-  
+  }
+
   &__left {
-    width: width(337px, $desktop);
-    margin-left: width(50px, $desktop);
+    width: size(337px, $desktop);
+    margin-left: size(50px, $desktop);
 
     &-head {
-      font-family: "FuturaDemiC";
-      font-size: width(15px, $desktop);
-      line-height: width(21px, $desktop);
+      font-family: $futuraDemiC;
+      font-size: size(15px, $desktop);
+      line-height: size(21px, $desktop);
       text-transform: uppercase;
+      padding-bottom: size(18px, $desktop);
 
       color: $white;
     }
 
     &-heading {
       display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: size(92px, $desktop);
 
       &-name {
-        font-family: "Yeseva One";
+        font-family: $yeseva;
         font-style: normal;
         font-weight: normal;
-        font-size: width(27px, $desktop);
-        line-height: width(37px, $desktop);
+        font-size: size(27px, $desktop);
+        line-height: size(37px, $desktop);
         text-transform: uppercase;
         color: $yellow;
       }
 
       &-stick {
-        width: width(92px, $desktop);
-        max-width: 92px;
-        height: 1px;
+        width: size(92px, $desktop);
+        max-width: size(92px, $desktop);
+        height: size(1px, $desktop);
         background: $yellow;
+        margin-bottom: size(15px, $desktop);
       }
     }
 
     &-num {
-      font-family: "Yeseva One";
+      font-family: $yeseva;
       font-style: normal;
       font-weight: normal;
-      font-size: width(18px, $desktop);
-      line-height: width(25px, $desktop);
+      font-size: size(18px, $desktop);
+      line-height: size(25px, $desktop);
       text-transform: uppercase;
       color: $white;
+      margin-bottom: size(22px, $desktop);
 
       &-heading {
-        font-family: "Yeseva One";
+        font-family: $yeseva;
         font-style: normal;
         font-weight: normal;
-        font-size: width(15px, $desktop);
-        line-height: width(23px, $desktop);
+        font-size: size(15px, $desktop);
+        line-height: size(23px, $desktop);
         text-transform: uppercase;
+        margin-bottom: size(16px, $desktop);
 
         color: $yellow;
       }
     }
 
     &-p {
-      font-family: "FuturaBookC";
-      font-size: width(15px, $desktop);
-      line-height: width(25px, $desktop);
+      font-family: $futuraBookC;
+      font-size: size(15px, $desktop);
+      line-height: size(25px, $desktop);
+      margin-bottom: size(91px, $desktop);
 
       color: $white;
     }
   }
   &__arrows {
-		margin-top: width(79.64px, $desktop);
-		display: flex;
+    margin-top: size(79.64px, $desktop);
+    width: size(287px, $desktop);
+    display: flex;
+    justify-content: space-between;
 
-		&-prev {
-			width: width(41.46px, $desktop);
+    &-prev {
+      width: size(41.46px, $desktop);
 
-			&:hover {
-				opacity: 0.7;
-			}
-		}
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
-		&-next {
-			width: width(41.46px, $desktop);
-			transform: rotate(-180deg);
+    &-next {
+      width: size(41.46px, $desktop);
+      transform: rotate(-180deg);
 
-			&:hover {
-				opacity: 0.7;
-			}
-		}
+      &:hover {
+        opacity: 0.7;
+      }
+    }
 
-		&-dot {
-			background: $white;
-			opacity: 0.3;
-			width: width(10px, $desktop);
-			height: width(10px, $desktop);
-			border-radius: 50%;
-			margin: 0 width(8px, $desktop);
+    &-dot {
+      background: $white;
+      opacity: 0.3;
+      width: size(10px, $desktop);
+      height: size(10px, $desktop);
+      border-radius: 50%;
+      margin: 0 size(8px, $desktop);
 
-			&:hover {
+      &:hover {
         background: $yellow;
         opacity: 1;
-			}
-			&_selected {
-				opacity: 1;
-				background: $white;
-				width: width(10px, $desktop);
-				height: width(10px, $desktop);
+      }
+      &--selected {
+        opacity: 1;
+        background: $white;
+        width: size(10px, $desktop);
+        height: size(10px, $desktop);
         border-radius: 50%;
-        margin: 0 width(8px, $desktop);
+        margin: 0 size(8px, $desktop);
 
-				&:hover {
-					background: $yellow;
-				}
-			}
-		}
+        &:hover {
+          background: $yellow;
+        }
+      }
+    }
   }
-  
+  &__right {
+    margin-top: size(60px, $desktop);
+  }
+
+  &__steps {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+
+    &-item {
+      opacity: 0.3;
+    }
+
+    &-num {
+      font-family: $yeseva;
+      line-height: size(21px, $desktop);
+      color: $white;
+      text-decoration: none;
+      border-bottom: size(1px, $desktop) solid $yellow;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+
+    &-txt {
+      margin-top: size(17px, $desktop);
+      margin-bottom: size(36px, $desktop);
+      width: size(127px, $desktop);
+
+      font-family: $futuraBookC;
+      font-size: size(15px, $desktop);
+      line-height: size(18px, $desktop);
+
+      color: $white;
+    }
+  }
+
   &__img {
-    width: width(765px, $desktop);
-    height: width(376.64px, $desktop);
-    max-width: 765px;
-    max-height: 376.64px;
+    width: size(765px, $desktop);
+    height: size(376.64px, $desktop);
+    margin-top: size(44.33px, $desktop);
   }
 }

@@ -7,26 +7,76 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media screen and (max-width: 500px) { 
-    background: #181818;
+  @media screen and (max-width: 425px) { 
+    background: $black;
+    padding-bottom: size(70px, $mobile);
+    position: relative;
   } 
+
   &__address {
-    font-family: "Yeseva One";
+    font-family: $yeseva;
     font-style: normal;
     font-weight: normal;
-    font-size: width(20px, $desktop);
-    line-height: width(28px, $desktop);
+    font-size: size(20px, $desktop);
+    line-height: size(28px, $desktop);
     text-align: center;
     text-transform: uppercase;
     color: $yellow;
-  }
+    margin: size(-200px, $desktop) auto size(26px, $desktop);
+    width: size(589px, $desktop);
 
+    @media (max-width: 425px) {
+      line-height: 138.6%;
+      font-size: size(18px, $mobile);
+      width: size(340px, $mobile);
+      height: size(51px, $mobile);
+      top: size(880px, $mobile);
+      left: size(18px, $mobile);
+      padding: 0 size(15px, $mobile);
+      position: absolute;
+    }
+
+    &--mobile {
+      @media (max-width: 425px) {
+        display: block;
+      }
+      
+    }
+  }
+  &__icons {
+    width: size(71px, $desktop);
+    min-width: 71px;
+    min-height: 28px;
+    height: size(28px, $desktop);
+    margin: 0 auto size(43px, $desktop);
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 425px) {
+      position: absolute;
+      top: size(930px, $mobile);
+      left: size(139px, $mobile);
+    }
+
+    &-icon {
+      width: size(28px, $desktop);
+      height: size(28px, $desktop);
+      min-width: 28px;
+      min-height: 28px;
+    }
+  }
+  
   &__map {
     display: block;
-    width: width(925px, $desktop);
-    max-width: 925px;
-    height: width(465px, $desktop);
-    max-height: width(465px, $desktop);
-    margin: 2vw auto 0;
+    width: size(925px, $desktop);
+    height: size(465px, $desktop);
+    margin: 0 auto;
+
+    @media (max-width: 425px) {
+      position: relative;
+      top: size(-110px, $mobile);
+      width: size(340px, $mobile);
+      height: size(255px, $mobile);
+    }
   }
 }

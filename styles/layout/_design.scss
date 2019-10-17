@@ -2,132 +2,238 @@
 @import "../abstracts/functions";
 
 .design {
-	width: 100%;
-  height: width(1020px, $desktop);
-  
-  @media screen and (max-width: 500px) { 
-    height: 100%;
-  } 
+  width: 100%;
+  height: size(1120px, $desktop);
 
   background-image: linear-gradient(
     to bottom,
     #ffffff,
-    #ffffff 48%,
-    $black 48%,
+    #ffffff 60.5%,
+    $black 60.5%,
     $black 100%
   );
 
+  @media screen and (max-width: 425px) {
+    height: 0%;
+    background: $black;
+  }
+
   &__heading {
-    font-family: "Yeseva One";
+    font-family: $yeseva;
     font-style: normal;
+    font-weight: normal;
     font-weight: 900;
-    font-size: width(20px, $desktop);
-    line-height: width(28px, $desktop);
-    padding-top: width(112.47px, $desktop);
+    font-size: size(20px, $desktop);
+    line-height: size(28px, $desktop);
+    padding-top: size(212.47px, $desktop);
     text-align: center;
     text-transform: uppercase;
 
     color: #181818;
+
+    @media screen and (max-width: 425px) {
+      color: $white;
+      font-size: size(22px, $mobile);
+      line-height: 138.6%;
+      margin-bottom: size(15.89px, $mobile);
+    }
   }
 
   &__picto {
     display: flex;
-    width: width(114px, $desktop);
-    margin: width(12.89px, $desktop) auto width(24.11px, $desktop);
+    width: size(114px, $desktop);
+    margin: size(12.89px, $desktop) auto size(24.11px, $desktop);
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 425px) {
+      width: size(114px, $mobile);
+    }
+
     &-stick {
       background: $yellow;
-      width: width(32px, $desktop);
-      height: 1.5px;
+      width: size(32px, $desktop);
+      height: size(1.5px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(32px, $mobile);
+        height: size(1.54px, $mobile);
+      }
+    }
+
+    &-icon {
+      width: size(28px, $desktop);
+      height: size(28px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(28px, $mobile);
+        height: size(28px, $mobile);
+      }
     }
   }
 
   &__p {
-    font-family: "FuturaBookC";
-    font-size: width(20px, $desktop);
-    line-height: width(27px, $desktop);
+    font-family: $futuraBookC;
+    font-size: size(20px, $desktop);
+    line-height: size(27px, $desktop);
     text-align: center;
-    padding-bottom: width(39px, $desktop);
+    margin-bottom: size(39px, $desktop);
 
     color: #363636;
+
+    @media screen and (max-width: 425px) {
+      width: size(334px, $mobile);
+      color: $white;
+      font-size: size(15px, $mobile);
+      line-height: 135.84%;
+      margin: size(23.11px, $mobile) auto size(39px, $mobile);
+      padding: 0 size(22px, $mobile);
+    }
   }
 
   &__blocks {
     display: flex;
     justify-content: center;
 
-    @media screen and (max-width: 500px) { 
+    @media screen and (max-width: 425px) {
       display: block;
       height: 100%;
-    } 
+    }
   }
 
   &__block {
-    margin: 0 width(15px, $desktop);
+    margin: 0 size(15px, $desktop);
+
+    &:not(:first-child) {
+      @media screen and (max-width: 425px) {
+        margin-top: size(-100px, $mobile);
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      width: size(340px, $mobile);
+      margin: 0 auto;
+    }
 
     &-img {
-      width: width(392px, $desktop);
-      max-width: width(392px, $desktop);
-      height: width(421px, $desktop);
-      max-height: 421px;
+      width: size(392px, $desktop);
+      height: size(421px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(340px, $mobile);
+        height: size(340px, $mobile);
+      }
     }
 
     &-txt {
       background: $white;
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-      width: width(330px, $desktop);
+      box-shadow: size(10px, $desktop) size(10px, $desktop) size(20px, $desktop)
+        rgba(0, 0, 0, 0.03);
+      width: size(330px, $desktop);
       position: relative;
-      padding-left: width(31px, $desktop);
-      top: width(-115px, $desktop);
-      left: width(30px, $desktop);
+      padding-left: size(31px, $desktop);
+      top: size(-115px, $desktop);
+      left: size(30px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(270px, $mobile);
+        left: 0;
+        top: size(-135px, $mobile);
+      }
     }
 
     &-heading {
-      padding-top: width(25px, $desktop);
-      padding-bottom: width(13px, $desktop);
-      font-family: "Yeseva One";
+      padding-top: size(25px, $desktop);
+      padding-bottom: size(13px, $desktop);
+      font-family: $yeseva;
       font-style: normal;
       font-weight: normal;
-      font-size: width(18px, $desktop);
-      line-height: width(25px, $desktop);
+      font-size: size(18px, $desktop);
+      line-height: size(25px, $desktop);
 
       color: #363636;
+
+      @media screen and (max-width: 425px) {
+        font-size: size(15px, $mobile);
+        line-height: 138.6%;
+        padding: size(18px, $mobile) 0 size(13px, $mobile) size(31px, $mobile);
+      }
+    }
+    &-ul {
+      @media screen and (max-width: 425px) {
+        padding: 0 0 size(31px, $mobile) size(31px, $mobile);
+      }
     }
 
     &-li {
       list-style: inside;
-      font-family: "FuturaBookC";
-      font-size: width(15px, $desktop);
-      line-height: width(25px, $desktop);
+      font-family: $futuraBookC;
+      font-size: size(15px, $desktop);
+      line-height: size(25px, $desktop);
 
-			color: #959595;
-			
-			&:last-child {
-				padding-bottom: width(57px, $desktop);
-			}
+      color: #959595;
+
+      @media screen and (max-width: 425px) {
+        width: size(198px, $mobile);
+        font-size: size(13px, $mobile);
+        line-height: 169.8%;
+      }
+
+      &--desk {
+        list-style: inside;
+        font-family: $futuraBookC;
+        font-size: size(15px, $desktop);
+        line-height: size(25px, $desktop);
+
+        color: #959595;
+        &:last-child {
+          padding-bottom: size(57px, $desktop);
+        }
+
+        @media screen and (max-width: 425px) {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        display: none;
+        @media screen and (max-width: 425px) {
+          display: inline;
+        }
+      }
     }
 
     &-price {
       background: $yellow;
       color: $white;
-      font-family: "Yeseva One";
+      font-family: $yeseva;
       font-weight: normal;
-      font-size: width(18px, $desktop);
-      line-height: width(25px, $desktop);
-			text-transform: uppercase;
-			width: width(228px, $desktop);
-			height: width(54px, $desktop);
-			max-width: 228px;
-			max-height: 54px;
-			position: relative;
-			padding-top: width(17px, $desktop);
-			padding-left: width(33px, $desktop);
-			box-sizing: border-box; 
-			top: width(-145px, $desktop);
-			left: width(30px, $desktop);
-			box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.1);
+      font-size: size(18px, $desktop);
+      line-height: size(25px, $desktop);
+      text-transform: uppercase;
+      width: size(228px, $desktop);
+      height: size(54px, $desktop);
+      position: relative;
+      padding-top: size(17px, $desktop);
+      padding-left: size(33px, $desktop);
+      box-sizing: border-box;
+      top: size(-145px, $desktop);
+      left: size(30px, $desktop);
+      box-shadow: size(5px, $desktop) size(5px, $desktop) size(10px, $desktop)
+        rgba(227, 184, 115, 0.1);
+
+      @media screen and (max-width: 425px) {
+        width: size(190.48px, $mobile);
+        height: size(40px, $mobile);
+        font-size: size(15px, $mobile);
+        line-height: 138.6%;
+        padding-top: size(10px, $mobile);
+        padding-left: size(44.21px, $mobile);
+        left: 0;
+        top: size(-155px, $mobile);
+        box-shadow: size(5px, $mobile) size(5px, $mobile) size(10px, $mobile)
+          rgba(227, 184, 115, 0.3);
+      }
     }
   }
 }

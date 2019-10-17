@@ -2,6 +2,7 @@
 @import './base/reset';
 @import './abstracts/variables';
 @import './abstracts/functions';
+@import './abstracts/fonts';
 @import './layout/header';
 @import './layout/home';
 @import './layout/projects';
@@ -25,14 +26,8 @@ html {
 }
 
 body {
-	max-width: 1440px;
 	width: 100%;
 	margin: 0 auto;
 	background: $white;
-
-	@media screen and (max-width: 500px) {
-		width: 100vw;
-
-	}
-
+	box-sizing: border-box;
 }

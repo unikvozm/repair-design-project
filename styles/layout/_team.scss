@@ -12,55 +12,89 @@
     $white 100%
   );
 
+  @media screen and (max-width: 425px) {
+    background: $black;
+  }
+
   &__heading {
-    font-family: "Yeseva One";
+    font-family: $yeseva;
     font-style: normal;
     font-weight: normal;
-    font-size: width(20px, $desktop);
-    line-height: width(28px, $desktop);
+    font-size: size(20px, $desktop);
+    line-height: size(28px, $desktop);
     text-align: center;
     text-transform: uppercase;
     color: $white;
-    padding-top: width(95.15px, $desktop);
+    padding-top: size(95.15px, $desktop);
+
+    @media screen and (max-width: 425px) {
+      font-size: size(22px, $mobile);
+      line-height: 138.6%;
+      margin-top: size(-100px, $mobile);
+      margin-bottom: size(12.53px, $mobile);
+    }
   }
 
   &__picto {
     display: flex;
-    width: width(116px, $desktop);
-    margin: 10px auto;
+    width: size(114px, $desktop);
+    margin: size(15px, $desktop) auto;
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 425px) {
+      width: size(114px, $mobile);
+      height: size(29px, $mobile);
+    }
+
     &-img {
+      width: size(32px, $desktop);
+      height: size(32px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(29px, $mobile);
+        height: size(29px, $mobile);
+      }      
     }
 
     &-stick {
       background: $yellow;
-      width: width(32px, $desktop);
-      height: 1.5px;
+      width: size(32px, $desktop);
+      height: size(1.54px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(114px, $mobile);
+        height: size(1.54px, $mobile);
+      }
     }
   }
 
   &__p {
-    font-family: "FuturaBookC";
-    font-size: width(20px, $desktop);
-    line-height: width(27px, $desktop);
+    font-family: $futuraBookC;
+    font-size: size(20px, $desktop);
+    line-height: size(27px, $desktop);
     text-align: center;
-    margin-bottom: width(38.53px, $desktop);
+    margin-bottom: size(68.53px, $desktop);
 
     color: $white;
+
+    @media screen and (max-width: 425px) {
+      font-size: size(15px, $mobile);
+      line-height: 135.84%;
+      margin-top: size(23.47px, $mobile);
+      margin-bottom: size(76px, $mobile);
+    }
   }
 
   &__teams {
-    width: width(1063.24px, $desktop);
-    max-width: 1063.23px;
+    width: size(1063.24px, $desktop);
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
 
-    @media screen and (max-width: 500px) { 
+    @media screen and (max-width: 425px) {
       display: block;
-    } 
+    }
   }
 
   &__block {
@@ -69,53 +103,128 @@
 
   &__icon {
     position: absolute;
-    width: width(70px, $desktop);
-    height: width(70px, $desktop);
-    max-width: 70px;
-    max-height: 70px;
+    width: size(70px, $desktop);
+    height: size(70px, $desktop);
+    padding: size(13px, $desktop);
+    background: $yellow;
+    box-shadow: 0 size(5px, $desktop) size(20px, $desktop) rgba(227, 184, 115, 0.5);
     top: -9%;
     left: -13%;
+
+    @media screen and (max-width: 425px) {
+      width: size(70px, $mobile);
+      height: size(70px, $mobile);
+      top: 2%;
+    }
   }
 
   &__photo {
-    width: width(272.24px, $desktop);
-    height: width(357.63px, $desktop);
-    max-width: 272.24px;
-    max-height: 357.63px;
+    width: size(272.24px, $desktop);
+    height: size(357.63px, $desktop);
+
+    @media screen and (max-width: 425px) {
+      width: size(304px, $mobile);
+      height: size(414px, $mobile);
+      margin-top: size(50px, $mobile);
+    }
   }
+
   &__txt {
+    position: relative;
+    top: size(-80px, $desktop);
+    margin: 0 auto;
+    width: size(233px, $desktop);
+    height: size(137px, $desktop);
+    background: $white;
+    box-shadow: 0 size(10px, $desktop) size(15px, $desktop) rgba(0, 0, 0, 0.05);
+  
+    @media screen and (max-width: 425px) {
+      width: size(233px, $mobile);
+      height: size(137px, $mobile);
+      top: size(-100px, $mobile);
+    }
   }
 
   &__name {
+    font-family: $yeseva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: size(18px, $desktop);
+    line-height: size(25px, $desktop);
+    text-align: center;
+    padding-top: size(22px, $desktop);
+
+    color: #181818;
+
+    @media screen and (max-width: 425px) {
+      font-size: size(18px, $mobile);
+      line-height: size(25px, $mobile);
+      padding-top: size(22px, $mobile);
+    }
   }
 
   &__profession {
+    font-family: $futuraBookC;
+    font-size: size(18px, $desktop);
+    line-height: size(26px, $desktop);
+    text-align: center;
+    margin: size(9px, $desktop) auto size(22px, $desktop);
+
+    color: #959595;
+
+    @media screen and (max-width: 425px) {
+      font-size: size(18px, $mobile);
+      line-height: size(26px, $mobile);
+      margin-top: size(9px, $mobile);
+      margin-bottom: size(24px, $mobile);
+    }
   }
   &__experience {
+    height: size(33px, $desktop);
+    padding-top: size(7px, $desktop);
+    background: $yellow;
+    font-family: $yeseva;
+    font-style: normal;
+    font-weight: normal;
+    font-size: size(13px, $desktop);
+    line-height: size(20px, $desktop);
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $white;
+
+    @media screen and (max-width: 425px) {
+      width: size(233px, $mobile);
+      height: size(44px, $mobile);
+      font-size: size(13px, $mobile);
+      line-height: size(20px, $mobile);
+      padding-top: size(13px, $mobile);
+      margin-bottom: size(111px, $mobile);
+    }
   }
 
   &__stick--btm {
     background: $yellow;
-    width: width(32px, $desktop);
-    height: 1.5px;
-    margin: 5% auto 2%;
+    width: size(32px, $desktop);
+    height: size(1.5px, $desktop);
+    margin: 0 auto size(17.29px, $desktop);
 
-    @media screen and (max-width: 500px) { 
+    @media screen and (max-width: 425px) {
       display: none;
-    } 
+    }
   }
 
   &__p--btm {
-    font-family: "FuturaBookC";
-    font-size: width(20px, $desktop);
-    line-height: width(34px, $desktop);
-		text-align: center;
-		padding-bottom: width(88.59px, $desktop);
+    font-family: $futuraBookC;
+    font-size: size(20px, $desktop);
+    line-height: size(34px, $desktop);
+    text-align: center;
+    padding-bottom: size(88.59px, $desktop);
 
     color: #363636;
 
-    @media screen and (max-width: 500px) { 
+    @media screen and (max-width: 425px) {
       display: none;
-    } 
+    }
   }
 }

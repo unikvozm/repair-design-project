@@ -3,78 +3,171 @@
 
 .types {
   width: 100%;
-  max-width: $desktop;
   background: $white;
 
   &__heading {
-    font-family: "Yeseva One";
+    font-family: $yeseva;
     font-style: normal;
     font-weight: normal;
-    font-size: width(20px, $desktop);
-    line-height: width(28px, $desktop);
-    padding-top: width(170px, $desktop);
+    font-size: size(20px, $desktop);
+    line-height: size(28px, $desktop);
     text-align: center;
     text-transform: uppercase;
 
     color: #181818;
+
+    @media screen and (max-width: 425px) {
+      margin-top: size(58px, $mobile);
+      margin-bottom: size(17px, $mobile);
+      font-size: size(22px, $mobile);
+      line-height: 138.6%;
+    }
   }
 
   &__picto {
     display: flex;
-    width: width(116px, $desktop);
-    margin: 10px auto;
+    width: size(114px, $desktop);
+    margin: size(13px, $desktop) auto;
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 425px) {
+      width: size(114px, $mobile);
+      margin-bottom: size(40px, $mobile);
+    }
+
     &-stick {
       background: $yellow;
-      width: width(32px, $desktop);
-      height: 1.5px;
+      width: size(32px, $desktop);
+      height: size(1.54px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(32px, $mobile);
+        height: size(1.54px, $mobile);
+      }
+    }
+
+    &-icon {
+      width: size(28px, $desktop);
+      height: size(28px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(28px, $mobile);
+        height: size(28px, $mobile);
+      }
     }
   }
 
   &__block {
-    width: width(1236px, $desktop);
-    max-width: 1236px;
+    width: size(1236px, $desktop);
     margin: 0 auto;
     display: grid;
     grid-template: 1fr / repeat(3, 1fr);
 
-    @media screen and (max-width: 500px) { 
+    @media screen and (max-width: 425px) {
       display: block;
-    } 
+      width: size(340px, $mobile);
+    }
+
+    &-item {
+      position: relative;
+    }
 
     &-img {
-      width: width(392px, $desktop);
-      max-width: 392px;
-      height: width(421px, $desktop);
-      max-height: 421px;
+      width: size(392px, $desktop);
+      height: size(421px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: 100%;
+        height: size(365.15px, $mobile);
+      }
     }
 
     &-text {
       background: $white;
-      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-      width: width(330px, $desktop);
-      height: width(286px, $desktop);
+      box-shadow: size(10px, $desktop) size(10px, $desktop) size(20px, $desktop)
+        rgba(0, 0, 0, 0.03);
+      width: size(330px, $desktop);
+
+      position: relative;
+      top: size(-100px, $desktop);
+      left: size(31px, $desktop);
+      padding: size(25px, $desktop) size(31px, $desktop) size(50px, $desktop);
+
+      @media screen and (max-width: 425px) {
+        width: size(270px, $mobile);
+        height: size(241px, $mobile);
+        box-shadow: size(5px, $mobile) size(10px, $mobile) size(20px, $mobile)
+          rgba(0, 0, 0, 0.05);
+        top: size(-145px, $mobile);
+        left: 0;
+      }
+    }
+
+    &-heading {
+      font-family: $yeseva;
+      font-style: normal;
+      font-weight: normal;
+      font-size: size(18px, $desktop);
+      line-height: size(25px, $desktop);
+
+      color: #363636;
+
+      @media screen and (max-width: 425px) {
+        font-size: size(15px, $mobile);
+        line-height: 138.6%;
+        padding: size(21px, $mobile) size(47px, $mobile) size(10px, $mobile)
+          size(31px, $mobile);
+      }
+    }
+
+    &-li {
+      font-family: $futuraBookC;
+      font-size: size(15px, $desktop);
+      line-height: size(25px, $desktop);
+      list-style: inside;
+
+      color: #959595;
+
+      @media screen and (max-width: 425px) {
+        font-size: size(13px, $mobile);
+        line-height: 169.8%;
+        padding-left: size(31px, $mobile);
+      }
     }
 
     &-price {
-      font-family: "Yeseva One";
+      position: relative;
+      top: size(-128px, $desktop);
+      left: size(31px, $desktop);
+      font-family: $yeseva;
       font-style: normal;
       font-weight: normal;
-      font-size: width(18px, $desktop);
-      line-height: width(25px, $desktop);
+      font-size: size(18px, $desktop);
+      line-height: size(25px, $desktop);
       text-transform: uppercase;
       color: $white;
       background: $yellow;
-      width: width(228px, $desktop);
-      max-width: 228px;
-      height: width(54px, $desktop);
-      max-height: 54px;
-      box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+      width: size(228px, $desktop);
+      height: size(54px, $desktop);
+      box-shadow: size(5px, $desktop) size(5px, $desktop) size(10px, $desktop)
+        rgba(227, 184, 115, 0.3);
       text-align: center;
       padding-top: 4%;
       margin-bottom: 15%;
+
+      @media screen and (max-width: 425px) {
+        position: absolute;
+        font-size: size(15px, $mobile);
+        line-height: 138.6%;
+        width: size(190.43px, $mobile);
+        height: size(40px, $mobile);
+        padding: size(11.36px, $mobile) auto;
+        top: size(445px, $mobile);
+        left: 0;
+        box-shadow: size(5px, $mobile) size(5px, $mobile) size(10px, $mobile)
+          rgba(227, 184, 115, 0.3);
+      }
     }
   }
 }

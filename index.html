@@ -13,27 +13,29 @@
         <h1 class="header__heading">IC "REPAIR DESIGN PROJECT"</h1>
       </logo>
       <nav class="header__nav">
-        <ul class="nav">
-          <li class="nav__item">
-            <a class="nav__link--active" href="#">Home</a>
+        <ul class="header__nav">
+          <li class="header__nav-item">
+            <a class="header__nav-link--active" href="#">Home</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#projects">Projects</a>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#projects">Projects</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#measurement">Measurement</a>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#measurement">Measurement</a>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
-          <li class="nav__item">
-            <a class="nav__link" href="#clients">Reviews</a>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#team">Team</a>
           </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#contact">Contacts</a>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#clients">Reviews</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#contact">Contacts</a>
           </li>
         </ul>
       </nav>
       <a class="header__tel" href="tel:+7928-768-3239">+7 (928) 768-32-39</a>
-      <button class="header__call button" type="submit">Request a call</button>
+      <button class="button header__call" type="submit">Request a call</button>
     </header>
     <main>
       <section class="home" id="home">
@@ -47,15 +49,18 @@
             <span class="home__heading--yellow">Rostov-on-Don</span>
           </h2>
           <p class="home__p">
-            Get ready-made turnkey repairs on time 
-            with work time saving up to 45 days and 20% from 
-            cost of materials due to the organization of work
+            Get ready-made turnkey repairs on time with work time saving up to
+            45 days and 20% from cost of materials due to the organization of
+            work
           </p>
-          <button class="home__calculate button" type="submit">
+          <button class="button home__calculate" type="submit">
             CALCULATE THE COST
           </button>
-          <button class="home__submit button" type="submit">
+          <button class="button home__submit" type="submit">
             SUBMIT YOUR APPLICATION
+          </button>
+          <button class="button home__submit--mobile" type="submit">
+            APPLICATION
           </button>
         </div>
         <a href="#projects" class="home__scroll-link"
@@ -69,7 +74,7 @@
       <section class="projects" id="projects">
         <ul class="projects__nav">
           <li class="projects__nav-item">
-            <a class="projects__nav-link_active" href="#"
+            <a class="projects__nav-link--active" href="#"
               >Rostov-on-Don, Admiral</a
             >
           </li>
@@ -87,14 +92,17 @@
               <div class="projects__heading-stick"></div>
             </div>
             <p class="projects__p">
-              Only a small part of the work performed by our company is <br />
-              presented on the site. For 14 years on in the construction <br />
-              market we have made happy more than 1000 families
+              Only a small part of the work performed by our company is
+              presented on the site. For 14 years on in the construction market
+              we have made happy more than 1000 families
             </p>
             <ul class="projects__description">
               <li class="projects__description-item">
                 <h4 class="projects__description-heading">City:</h4>
-                <p class="projects__description-p">Rostov-on-Don LCD admiral</p>
+                <p class="projects__description-p">
+                  Rostov-on-Don <br />
+                  LCD admiral
+                </p>
               </li>
               <li class="projects__description-item">
                 <h4 class="projects__description-heading">apartment area:</h4>
@@ -115,7 +123,7 @@
                 alt="previous"
                 class="projects__arrows-prev"
               />
-              <div class="projects__arrows-circle_active"></div>
+              <div class="projects__arrows-circle--active"></div>
               <div class="projects__arrows-circle"></div>
               <div class="projects__arrows-circle"></div>
               <img
@@ -128,6 +136,11 @@
 
           <div class="projects__slider">
             <img
+              src="./assets/images/slider-arrow.svg"
+              alt="slider-icon"
+              class="projects__slider-prev"
+            />
+            <img
               src="./assets/images/image 2.1.png"
               alt="interier"
               class="projects__slider-img--desk"
@@ -138,27 +151,31 @@
               class="projects__slider-img"
             />
             <img
-              src="./assets/images/Group 8.1.svg"
+              src="./assets/images/slider-arrow.svg"
               alt="slider-icon"
-              class="projects__slider-icon"
+              class="projects__slider-next"
             />
           </div>
         </article>
       </section>
       <section class="online">
-        <div class="online__wrapper-head">
-          <h4 class="online__heading">online control</h4>
-          <div class="online__picto">
-            <div class="online__picto-stick"></div>
-            <img
-              src="./assets/images/camera.svg"
-              alt="camera-icon"
-              class="online__picto-camera"
-            />
-            <div class="online__picto-stick"></div>
-          </div>
+        <h4 class="online__heading">online control</h4>
+        <div class="online__picto">
+          <div class="online__picto-stick"></div>
+          <img
+            src="./assets/images/camera.svg"
+            alt="camera-icon"
+            class="online__picto-icon"
+          />
+          <div class="online__picto-stick"></div>
         </div>
-
+        <div class="online__buildings-wrapper">
+          <img
+            class="online__buildings"
+            src="./assets/images/online_buildings.png"
+            alt="buildings theme"
+          />
+        </div>
         <iframe
           class="online__video"
           src="https://www.youtube.com/embed/W25aL7SWeJk"
@@ -166,49 +183,60 @@
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+
         <div class="online__stick-btm"></div>
         <p class="online__p">
           At each facility, a camera is installed that broadcasts the progress
-          of work on the clock. <br />
-          At any time, you can go to our website and monitor the progress of
-          work in your <br />
-          apartment. You can watch the live broadcast from one of our
-          facilities!<br />
-          Leave a request below and you will receive a link to the broadcast.
+          of work on the clock. At any time, you can go to our website and
+          monitor the progress of work in your apartment. You can watch the live
+          broadcast from one of our facilities! Leave a request below and you
+          will receive a link to the broadcast.
         </p>
         <form class="online__form" action="submit">
-          <label class="online__form-label" for="name">Name</label>
-          <input
-            class="online__form-input"
-            name="name"
-            type="text"
-            placeholder="What is your name:"
-            required
-          />
-          <label class="online__form-label" for="phone">Phone</label>
-          <input
-            class="online__form-input"
-            name="phone"
-            type="tel"
-            placeholder="Your phone number:"
-            required
-          />
-          <input
-            class="online__form-submit button"
-            type="submit"
-            value="SUBMIT"
-          />
-          <input
-            class="online__form-agree"
-            name="agree"
-            type="checkbox"
-            value="agree"
-            checked
-            required
-          />
-          <label class="online__form-agree-label" for="agree"
-            >I agree to the processing of personal data</label
-          >
+          <div class="online__form-wrapper">
+            <div class="online__form-wr">
+              <label class="online__form-label" for="online-name">Name</label>
+              <input
+                class="online__form-input"
+                name="name"
+                id="online-name"
+                type="text"
+                placeholder="What is your name:"
+                required
+              />
+            </div>
+
+            <div class="online__form-wr">
+              <label class="online__form-label" for="online-phone">Phone</label>
+              <input
+                class="online__form-input"
+                name="phone"
+                id="online-phone"
+                type="tel"
+                placeholder="Your phone number:"
+                required
+              />
+            </div>
+
+            <input
+              class="button online__form-submit"
+              type="submit"
+              value="SUBMIT"
+            />
+          </div>
+          <label class="online__form-agree" for="online-agree">
+            I agree to the processing of personal data
+            <input
+              class="online__form-agree-check"
+              name="agree"
+              id="online-agree"
+              type="checkbox"
+              value="agree"
+              checked="checked"
+              required
+            />
+            <span class="online__form-agree-checkmark"></span>
+          </label>
         </form>
       </section>
       <section class="types">
@@ -218,7 +246,7 @@
           <img
             src="./assets/images/tools.svg"
             alt="tools-icon"
-            class="types__picto-tools"
+            class="types__picto-icon"
           />
           <div class="types__picto-stick"></div>
         </div>
@@ -229,7 +257,7 @@
               alt="redecorated interier"
               class="types__block-img"
             />
-            <div class="types_block-text">
+            <div class="types__block-text">
               <h5 class="types__block-heading">Redecorating</h5>
               <ul class="types__block-ul">
                 <li class="types__block-li">Dismantling of old coatings</li>
@@ -249,7 +277,7 @@
               alt="overhauled interier"
               class="types__block-img"
             />
-            <div class="types_block-text">
+            <div class="types__block-text">
               <h5 class="types__block-heading">Overhaul</h5>
               <ul class="types__block-ul">
                 <li class="types__block-li">Dismantling of old coatings</li>
@@ -269,7 +297,7 @@
               alt="designer repaired interier"
               class="types__block-img"
             />
-            <div class="types_block-text">
+            <div class="types__block-text">
               <h5 class="types__block-heading">Designer Repair</h5>
               <ul class="types__block-ul">
                 <li class="types__block-li">Dismantling of old coatings</li>
@@ -289,25 +317,26 @@
       <section class="measurement" id="measurement">
         <div class="measurement__stages">
           <div class="measurement__stages-circle"></div>
-          <div class="measurement__stages-div_1">
-            <div class="measurement__stages-div-circle">01</div>
+          <div class="measurement__stages-div1">
+            <div class="measurement__stages-div-circle"><p>01</p></div>
             <p class="measurement__stages-div-text">
               Our specialist will arrive for measurements per day<br />
               contact, or appoint a date convenient for you
             </p>
           </div>
-          <div class="measurement__stages-div_2">
-            <div class="measurement__stages-div-circle">02</div>
+          <div class="measurement__stages-div2">
+            <div class="measurement__stages-div-circle"><p>02</p></div>
             <p class="measurement__stages-div-text">Free metering</p>
           </div>
-          <div class="measurement__stages-div_3">
-            <div class="measurement__stages-div-circle">03</div>
+          <div class="measurement__stages-div3">
+            <div class="measurement__stages-div-circle"><p>03</p></div>
             <p class="measurement__stages-div-text">Free consultation</p>
           </div>
-          <div class="measurement__stages-div_4">
-            <div class="measurement__stages-div-circle">04</div>
+          <div class="measurement__stages-div4">
+            <div class="measurement__stages-div-circle"><p>04</p></div>
             <p class="measurement__stages-div-text">
-              Get a cost estimate and the timing of your future repairs
+              Get a cost estimate and <br />
+              the timing of your future repairs
             </p>
           </div>
         </div>
@@ -316,55 +345,74 @@
             <h5 class="measurement__form-heading">
               Leave a request for free departure of the measurer
             </h5>
-            <label class="measurement__form-label" for="name">Name</label>
+            <div class="measurement__form-wr">
+              <label class="measurement__form-label" for="measurement-name"
+                >Name</label
+              >
+              <input
+                id="measurement-name"
+                class="measurement__form-input"
+                name="name"
+                type="text"
+                placeholder="What is your name:"
+                required
+              />
+            </div>
+            <div class="measurement__form-wr">
+              <label class="measurement__form-label" for="measurement-phone"
+                >Phone</label
+              >
+              <input
+                class="measurement__form-input"
+                name="phone"
+                id="measurement-phone"
+                type="tel"
+                placeholder="Your phone number:"
+                required
+              />
+            </div>
+            <div class="measurement__form-wr">
+              <label class="measurement__form-label" for="measurement-email"
+                >Email</label
+              >
+              <input
+                class="measurement__form-input"
+                name="email"
+                id="measurement-email"
+                type="email"
+                placeholder="Your email"
+                required
+              />
+            </div>
+
+            <label class="measurement__form-agree" for="measurement-agree">
+              I agree to the processing of personal data
+              <input
+                class="measurement__form-agree-check"
+                name="agree"
+                id="measurement-agree"
+                type="checkbox"
+                value="agree"
+                checked="checked"
+                required
+              />
+              <span class="measurement__form-agree-checkmark"></span>
+            </label>
             <input
-              class="measurement__form-input"
-              name="name"
-              type="text"
-              placeholder="What is your name:"
-              required
-            />
-            <label class="measurement__form-label" for="phone">Phone</label>
-            <input
-              class="measurement__form-input"
-              name="phone"
-              type="tel"
-              placeholder="Your phone number:"
-              required
-            />
-            <label class="measurement__form-label" for="email">Email</label>
-            <input
-              class="measurement__form-input"
-              name="question"
-              type="email"
-              placeholder="Your email"
-              required
-            />
-            <input
-              class="measurement__form-agree"
-              name="agree"
-              type="checkbox"
-              value="agree"
-              checked
-              required
-            />
-            <label class="measurement__form-agree-label" for="agree"
-              >I agree to the processing of personal data</label
-            >
-            <input
-              class="measurement__form-submit button"
+              class="button measurement__form-submit"
               type="submit"
               value="Call the measurer"
             />
           </form>
           <div class="measurement__save">
             <img
-              src="./assets/images/pig.svg"
+              src="./assets/images/piggy.svg"
               alt="pig-icon"
               class="measurement__save-img"
             />
             <p class="measurement__save-text">
-              Help save 10 - 20% of the cost of materials
+              Help save 10 - 20% of the <br />
+              cost of materials
             </p>
           </div>
         </div>
@@ -376,7 +424,7 @@
             wildest fantasies
           </h3>
           <ul class="styles__ul">
-            <li class="styles__li_selected">American classic</li>
+            <li class="styles__li--selected">American classic</li>
             <li class="styles__li">Empire</li>
             <li class="styles__li">Classical</li>
             <li class="styles__li">Loft</li>
@@ -393,24 +441,41 @@
           <img
             src="./assets/images/styles-img1.png"
             alt="interier"
-            class="styles__img_1"
+            class="styles__img1"
           />
           <img
             src="./assets/images/styles-img2.png"
             alt="interier"
-            class="styles__img_2"
+            class="styles__img2"
           />
         </div>
         <div class="styles__block3">
           <img
             src="./assets/images/styles-img3.png"
             alt="interier"
-            class="styles__img_3"
+            class="styles__img3"
           />
           <img
             src="./assets/images/styles-img4.png"
             alt="interier"
-            class="styles__img_4"
+            class="styles__img4"
+          />
+        </div>
+        <div class="styles__slider">
+          <img
+            src="./assets/images/slider-arrow.svg"
+            alt="slider-icon"
+            class="styles__slider-prev"
+          />
+          <img
+            src="./assets/images/styles-slider.png"
+            alt="interier"
+            class="styles__slider-img"
+          />
+          <img
+            src="./assets/images/slider-arrow.svg"
+            alt="slider-icon"
+            class="styles__slider-next"
           />
         </div>
       </section>
@@ -484,14 +549,17 @@
                 <li class="design__block-li">Plan of ceilings</li>
                 <li class="design__block-li">Floor Plan</li>
                 <li class="design__block-li">Electricians plan</li>
-                <li class="design__block-li">Lighting plan</li>
-                <li class="design__block-li">Wall reamers</li>
-                <li class="design__block-li">3D visualization</li>
-                <li class="design__block-li">Bill of materials</li>
                 <li class="design__block-li">
+                  Lighting plan
+                  <span class="design__block-li--mobile">...</span>
+                </li>
+                <li class="design__block-li--desk">Wall reamers</li>
+                <li class="design__block-li--desk">3D visualization</li>
+                <li class="design__block-li--desk">Bill of materials</li>
+                <li class="design__block-li--desk">
                   Departure for a selection of materials
                 </li>
-                <li class="design__block-li">Furniture selection</li>
+                <li class="design__block-li--desk">Furniture selection</li>
               </ul>
             </div>
             <div class="design__block-price">900 rub / m2</div>
@@ -515,10 +583,13 @@
           <p class="steps__left-p">
             After your call, we go to you to consult and measure the premises of
             your apartment. During our meeting, you can ask absolutely any
-            number of questions. An appraiser-appraiser leaves to measure the
-            room. He will advise you on the issues of repair technology,
-            apartment design, terms of repair of the apartment as a whole and
-            its individual stages.
+            number of questions. An <br />
+            appraiser-appraiser leaves to measure the room.
+            <br />
+            <br />
+            He will advise you on the issues of repair technology, apartment
+            design, terms of repair of the apartment as a whole and its
+            individual stages.
           </p>
           <div class="steps__arrows">
             <img
@@ -526,7 +597,7 @@
               src="./assets/images/arrow.svg"
               alt="previous"
             />
-            <div class="steps__arrows-dot_selected"></div>
+            <div class="steps__arrows-dot--selected"></div>
             <div class="steps__arrows-dot"></div>
             <div class="steps__arrows-dot"></div>
             <div class="steps__arrows-dot"></div>
@@ -541,9 +612,11 @@
         </div>
         <div class="steps__right">
           <div class="steps__steps">
-            <div class="steps__steps-item_selected">
+            <div class="steps__steps-item--selected">
               <a href="#" class="steps__steps-num">01</a>
-              <p class="steps__steps-txt">Departure to room measurements</p>
+              <p class="steps__steps-txt">
+                Departure to <br />room measurements
+              </p>
             </div>
             <div class="steps__steps-item">
               <a href="#" class="steps__steps-num">02</a>
@@ -551,7 +624,10 @@
             </div>
             <div class="steps__steps-item">
               <a href="#" class="steps__steps-num">03</a>
-              <p class="steps__steps-txt">Development project design</p>
+              <p class="steps__steps-txt">
+                Development <br />
+                project design
+              </p>
             </div>
             <div class="steps__steps-item">
               <a href="#" class="steps__steps-num">04</a>
@@ -664,20 +740,22 @@
         </p>
         <div class="clients__reviews">
           <div class="clients__review">
-            <img
-              src="./assets/images/client1.png"
-              alt="Fedosova Maria Konstantinovna"
-              class="clients__img"
-            />
-            <h6 class="clients__name">Fedosova Maria Konstantinovna</h6>
+            <div class="clients__review-wrapper">
+              <img
+                src="./assets/images/client1.png"
+                alt="Fedosova Maria Konstantinovna"
+                class="clients__img"
+              />
+              <h6 class="clients__name">Fedosova Maria Konstantinovna</h6>
+            </div>
             <p class="clients__txt">
-              I want to thank the guys for their work. WE PUT YOUR SHOWER PART
-              IN REPAIR. I am VERY grateful that I referred to the repair as to
-              my own. GREAT THANKS I EXPRESS THE PROJECT TO GEORGIA FOR ITS
-              PROFESSIONALISM AND APPROACH. THE REPAIR PROCESS WAS TURNED OUT IN
-              TERMS, FASTER THAN ANTICIPATED. TEAM MOBILE AND PROFESSIONAL.
-              WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS. QUALITY SATISFIED.
-              PRICES DEMOCRATIC. I RECOMMEND THESE MASTERS.
+              I want to thank the guys for their work. We put your shower part
+              in repair. I am very grateful that I referred to the repair as to
+              my own. Great thanks I express the project to Georgia for its
+              professionalism and approach. The repair process was turned out in
+              terms, faster than anticipated. Team mobile and professional.
+              Works performed qualitative without comments. Quality satisfied.
+              Prices democratic. I recommend these masters.
             </p>
             <div class="clients__details">
               <div class="clients__size">
@@ -685,32 +763,36 @@
                   src="./assets/images/size.svg"
                   alt="size-icon"
                   class="clients__size-icon"
-                />40 m2
+                />
+                <p>40 m2</p>
               </div>
               <div class="clients__time">
                 <img
                   src="./assets/images/time.svg"
                   alt="time-icon"
                   class="clients__time-icon"
-                />48 DAYS
+                />
+                <p>48 DAYS</p>
               </div>
             </div>
           </div>
           <div class="clients__review">
-            <img
-              src="./assets/images/client2.png"
-              alt="Afanasyev Sergey Alexandrovich"
-              class="clients__img"
-            />
-            <h6 class="clients__name">Afanasyev Sergey Alexandrovich</h6>
+            <div class="clients__review-wrapper">
+              <img
+                src="./assets/images/client2.png"
+                alt="Afanasyev Sergey Alexandrovich"
+                class="clients__img"
+              />
+              <h6 class="clients__name">Afanasyev Sergey Alexandrovich</h6>
+            </div>
             <p class="clients__txt">
-              I want to thank the guys for their work. WE PUT YOUR SHOWER PART
-              IN REPAIR. I am VERY grateful that I referred to the repair as to
-              my own. GREAT THANKS I EXPRESS THE PROJECT TO GEORGIA FOR ITS
-              PROFESSIONALISM AND APPROACH. THE REPAIR PROCESS WAS TURNED OUT IN
-              TERMS, FASTER THAN ANTICIPATED. TEAM MOBILE AND PROFESSIONAL.
-              WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS. QUALITY SATISFIED.
-              PRICES DEMOCRATIC. I RECOMMEND THESE MASTERS.
+              I want to thank the guys for their work. We put your shower part
+              in repair. I am very grateful that I referred to the repair as to
+              my own. Great thanks I express the project to Georgia for its
+              professionalism and approach. The repair process was turned out in
+              terms, faster than anticipated. Team mobile and professional.
+              Works performed qualitative without comments. Quality satisfied.
+              Prices democratic. I recommend these masters.
             </p>
             <div class="clients__details">
               <div class="clients__size">
@@ -718,32 +800,36 @@
                   src="./assets/images/size.svg"
                   alt="size-icon"
                   class="clients__size-icon"
-                />90 m2
+                />
+                <p>90 m2</p>
               </div>
               <div class="clients__time">
                 <img
                   src="./assets/images/time.svg"
                   alt="time-icon"
                   class="clients__time-icon"
-                />120 DAYS
+                />
+                <p>120 DAYS</p>
               </div>
             </div>
           </div>
           <div class="clients__review">
-            <img
-              src="./assets/images/client3.png"
-              alt="Kiriev Egor Leonidovich"
-              class="clients__img"
-            />
-            <h6 class="clients__name">Kiriev Egor Leonidovich</h6>
+            <div class="clients__review-wrapper">
+              <img
+                src="./assets/images/client3.png"
+                alt="Kiriev Egor Leonidovich"
+                class="clients__img"
+              />
+              <h6 class="clients__name">Kiriev Egor Leonidovich</h6>
+            </div>
             <p class="clients__txt">
-              I want to thank the guys for their work. WE PUT YOUR SHOWER PART
-              IN REPAIR. I am VERY grateful that I referred to the repair as to
-              my own. GREAT THANKS I EXPRESS THE PROJECT TO GEORGIA FOR ITS
-              PROFESSIONALISM AND APPROACH. THE REPAIR PROCESS WAS TURNED OUT IN
-              TERMS, FASTER THAN ANTICIPATED. TEAM MOBILE AND PROFESSIONAL.
-              WORKS PERFORMED QUALITATIVELY WITHOUT COMMENTS. QUALITY SATISFIED.
-              PRICES DEMOCRATIC. I RECOMMEND THESE MASTERS.
+              I want to thank the guys for their work. We put your shower part
+              in repair. I am very grateful that I referred to the repair as to
+              my own. Great thanks I express the project to Georgia for its
+              professionalism and approach. The repair process was turned out in
+              terms, faster than anticipated. Team mobile and professional.
+              Works performed qualitative without comments. Quality satisfied.
+              Prices democratic. I recommend these masters.
             </p>
             <div class="clients__details">
               <div class="clients__size">
@@ -751,14 +837,16 @@
                   src="./assets/images/size.svg"
                   alt="size-icon"
                   class="clients__size-icon"
-                />56 m2
+                />
+                <p>56 m2</p>
               </div>
               <div class="clients__time">
                 <img
                   src="./assets/images/time.svg"
                   alt="time-icon"
                   class="clients__time-icon"
-                />86 DAYS
+                />
+                <p>86 DAYS</p>
               </div>
             </div>
           </div>
@@ -767,51 +855,68 @@
       <section class="contact" id="contact">
         <form action="submit" class="contact__form">
           <h5 class="contact__form-heading">have any questions?</h5>
-          <label class="contact__form-label" for="name">Name</label>
+          <div class="contact__form-container">
+            <div class="contact__form-wr">
+              <label class="contact__form-label" for="contact-name">Name</label>
+              <input
+                class="contact__form-input"
+                name="name"
+                id="contact-name"
+                type="text"
+                placeholder="What is your name:"
+                required
+              />
+            </div>
+            <div class="contact__form-wr">
+              <label class="contact__form-label" for="contact-phone"
+                >Phone</label
+              >
+              <input
+                class="contact__form-input"
+                name="phone"
+                id="contact-phone"
+                type="tel"
+                placeholder="Your phone number:"
+                required
+              />
+            </div>
+          </div>
+          <div class="contact__form-wr--long">
+            <label class="contact__form-label" for="contact-question"
+              >Question</label
+            >
+            <input
+              class="contact__form-input"
+              name="question"
+              id="contact-question"
+              type="text"
+              placeholder="I want to know:"
+              required
+            />
+          </div>
+
+          <label class="contact__form-agree" for="contact-agree">
+            I agree to the processing of personal data
+            <input
+              class="contact__form-agree-check"
+              name="agree"
+              id="contact-agree"
+              type="checkbox"
+              value="agree"
+              checked="checked"
+              required
+            />
+            <span class="contact__form-agree-checkmark"></span>
+          </label>
           <input
-            class="contact__form-input"
-            name="name"
-            type="text"
-            placeholder="What is your name:"
-            required
-          />
-          <label class="contact__form-label" for="phone">Phone</label>
-          <input
-            class="contact__form-input"
-            name="phone"
-            name="phone"
-            type="tel"
-            placeholder="Your phone number:"
-            required
-          />
-          <label class="contact__form-label" for="question">Question</label>
-          <input
-            class="contact__form-input"
-            name="question"
-            type="text"
-            placeholder="I want to know:"
-            required
-          />
-          <input
-            class="contact__form-agree"
-            name="agree"
-            type="checkbox"
-            value="agree"
-            checked
-            required
-          />
-          <label class="contact__form-agree-label" for="agree"
-            >I agree to the processing of personal data</label
-          >
-          <input
-            class="contact__form-submit button"
+            class="button contact__form-submit"
             type="submit"
             value="SUBMIT"
           />
         </form>
         <h6 class="contact__address">
-          Rostov-on-Don, Nansen St., 239 Shopping Center<br />
-          Decorum Tel +7 (928) 768 32 29
+          Rostov-on-Don, Nansen St., 239 Shopping Center Decorum
+          <span class="contact__address--mobile">Tel +7 (928) 768 32 29</span>
         </h6>
         <div class="contact__icons">
           <a href="#" class="contact__icons-link"
@@ -837,30 +942,32 @@
 
     <footer class="footer">
       <logo class="footer__logo">
-        <h1 class="footer__heading">IC "REPAIR DESIGN PROJECT"</h1>
+        <h2 class="footer__heading">IC "REPAIR DESIGN PROJECT"</h2>
       </logo>
       <nav class="footer__nav">
-        <ul class="nav">
-            <li class="nav__item">
-                <a class="nav__link--active" href="#">Home</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#projects">Projects</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#measurement">Measurement</a>
-              </li>
-              <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
-              <li class="nav__item">
-                <a class="nav__link" href="#clients">Reviews</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#contact">Contacts</a>
-              </li>
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a class="footer__nav-link--active" href="#">Home</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#measurement">Measurement</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#team">Team</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#clients">Reviews</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#contact">Contacts</a>
+          </li>
         </ul>
       </nav>
       <a class="footer__tel" href="tel:+7928-768-3239">+7 (928) 768-32-39</a>
-      <button class="footer__call button" type="submit">Request a call</button>
+      <button class="button footer__call " type="submit">Request a call</button>
     </footer>
   </body>
 </html>

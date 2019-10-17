@@ -1,69 +1,147 @@
-@import '../abstracts/functions';
-@import '../abstracts/variables';
+@import "../abstracts/functions";
+@import "../abstracts/variables";
 
 .button {
-	background-color: $yellow;
-	color: $white;
-	font-family: "FuturaDemiC";
-	font-size: width(13px, $desktop);
-	line-height: width(15px, $desktop);
-	text-transform: uppercase;
-	cursor: pointer;
-	border: $yellow;
-	box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-	border-radius: 2px;
+  background-color: $yellow;
+  color: $white;
+  font-family: $futuraDemiC;
+  font-size: size(13px, $desktop);
+  line-height: size(15px, $desktop);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: $yellow;
+  box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
+    rgba(227, 184, 115, 0.2);
+  border-radius: size(2px, $desktop);
 
-	&:hover {
-		background-color: darken($yellow, 20%);
-	}
+  &:hover {
+    background-color: darken($yellow, 20%);
+  }
 
-	@media screen and (max-width: 500px) { 
-		font-size: width(13px, $mobile);
-		line-height: width(15px, $mobile);
-		width: width(338.61px, $mobile);
-		display: block;
-		padding: width(19px, $mobile) auto;
-	} 
+  @media (max-width: 425px) {
+    font-size: size(13px, $mobile);
+    line-height: size(15px, $mobile);
+    width: size(338.61px, $mobile);
+    display: block;
+    padding: size(19px, $mobile) auto;
+  }
 }
 
 .header__call {
-	width: width(161px, $desktop);
-	height: width(37px, $desktop);
+  width: size(161px, $desktop);
+  height: size(37px, $desktop);
 
-	@media screen and (max-width: 500px) { 
-		display: none;
-	}
+  @media (max-width: 425px) {
+    display: none;
+  }
 }
 
 .home__calculate {
-	position: relative;
-	top: width(248px, $desktop);
-	left: width(60px, $desktop);
-	width: width(207px, $desktop);
-	height: width(51px, $desktop);
-	box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+  position: relative;
+  top: size(248px, $desktop);
+  left: size(60px, $desktop);
+  width: size(207px, $desktop);
+  height: size(51px, $desktop);
+  box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
+    rgba(227, 184, 115, 0.3);
 
-	@media screen and (max-width: 500px) { 
-		line-height: width(15px, $mobile);
-		width: width(338.61px, $mobile);
-		height: width(51px, $mobile);
-	}
+  @media (max-width: 425px) {
+    line-height: size(15px, $mobile);
+    width: size(338.61px, $mobile);
+    height: size(51px, $mobile);
+    left: 0;
+    margin: 0 auto;
+  }
 }
 
 .home__submit {
-	position: relative;
-	top: width(248px, $desktop);
-	left: width(80px, $desktop);
-	width: width(207px, $desktop);
-	height: width(51px, $desktop);
-	border: 1px solid $white;
-	background-color: transparent;
+  position: relative;
+  top: size(248px, $desktop);
+  left: size(80px, $desktop);
+  width: size(207px, $desktop);
+  height: size(51px, $desktop);
+  border: size(1px, $desktop) solid $white;
+  background-color: transparent;
 
-	@media screen and (max-width: 500px) { 
-		line-height: width(15px, $mobile);
-		width: width(338.61px, $mobile);
-		height: width(51px, $mobile);
-		left: width(17px, $mobile);
-		top: width(90px, $mobile);
-	}
+  @media (max-width: 425px) {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @media (max-width: 425px) {
+      display: block;
+      box-sizing: border-box;
+      line-height: size(15px, $mobile);
+      width: size(338.61px, $mobile);
+      height: size(51px, $mobile);
+
+      top: size(90px, $mobile);
+      position: relative;
+      background-color: transparent;
+      border: 1px solid $white;
+      left: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+.online__form-submit {
+  box-shadow: 0 size(15px, $desktop) size(15px, $desktop)
+    rgba(227, 184, 115, 0.15);
+  font-size: size(15px, $desktop);
+  line-height: size(26px, $desktop);
+  width: size(200px, $desktop);
+
+  @media (max-width: 425px) {
+    line-height: size(26px, $mobile);
+    font-size: size(15px, $mobile);
+    width: size(340px, $mobile);
+    height: size(51px, $mobile);
+    top: size(50px, $mobile);
+    position: relative;
+  }
+}
+
+.measurement__form-submit {
+  width: size(213px, $desktop);
+  height: size(51px, $desktop);
+  position: relative;
+  float: right;
+  margin-top: size(10px, $desktop);
+  margin-right: size(59px, $desktop);
+  padding: size(18.72px, $desktop) auto size(19.28px, $desktop);
+  line-height: size(18px, $desktop);
+  box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
+    rgba(227, 184, 115, 0.15);
+}
+
+.contact__form-submit {
+  width: size(200px, $desktop);
+  height: size(51px, $desktop);
+  position: relative;
+  margin-left: size(341.5px, $desktop);
+  margin-bottom: size(34.4px, $desktop);
+  box-shadow: 0 size(5px, $desktop) size(20px, $desktop)
+    rgba(227, 184, 115, 0.1);
+
+    @media (max-width: 425px) {
+      line-height: size(26px, $mobile);
+      font-size: size(15px, $mobile);
+      width: size(340px, $mobile);
+      height: size(51px, $mobile);
+      top: 0;
+      left: 0;
+      margin: size(67.33px, $mobile) auto size(46px, $mobile);
+    }    
+}
+
+.footer__call {
+  width: size(161px, $desktop);
+  height: size(37px, $desktop);
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 }

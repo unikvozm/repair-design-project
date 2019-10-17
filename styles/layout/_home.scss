@@ -2,43 +2,39 @@
 @import "../abstracts/functions";
 
 .home {
-  max-width: $desktop;
+  padding-bottom: size(107px, $desktop);
   width: 100%;
-  height: width(838px, $desktop);
-  max-height: 838px;
+  height: size(838px, $desktop);
   background: $black;
   overflow: hidden;
 
-  @media screen and (max-width: 500px) { 
-    height: 100%;
- 
-  } 
+  @media (max-width: 425px) {
+    height: size(476px, $mobile);
+  }
 
   &__instagram {
     position: absolute;
-    width: width(82px, $desktop);
-    max-width: 82px;
-    height: width(82px, $desktop);
-    max-height: 82px;
+    width: size(82px, $desktop);
+    height: size(82px, $desktop);
 
     transform: rotate(90deg);
 
-    @media screen and (max-width: 500px) { 
+    @media (max-width: 425px) {
       display: none;
-    } 
+    }
   }
 
   &__link {
-    font-family: "FuturaDemiC";
-    font-size: width(14px, $desktop);
-    line-height: width(16px, $desktop);
+    font-family: $futuraDemiC;
+    font-size: size(14px, $desktop);
+    line-height: size(16px, $desktop);
     text-align: center;
     background: $black;
     color: $yellow;
     text-decoration: none;
     position: relative;
-    top: width(31px, $desktop);
-    left: width(284px, $desktop);
+    top: size(31px, $desktop);
+    left: size(284px, $desktop);
 
     &:hover {
       text-decoration: underline;
@@ -47,11 +43,11 @@
 
   &__stick {
     background-color: $yellow;
-    width: width(51px, $desktop);
+    width: size(51px, $desktop);
     height: 1px;
     position: relative;
-    top: width(23px, $desktop);
-    left: width(380px, $desktop);
+    top: size(23px, $desktop);
+    left: size(380px, $desktop);
   }
 
   &__img {
@@ -59,94 +55,107 @@
     background-size: cover;
     height: 100%;
     position: relative;
-    left: width(82px, $desktop);
+    left: size(82px, $desktop);
     background-repeat: no-repeat;
-    width: width(1356px, $desktop);
-    max-width: 1356px;
+    width: size(1356px, $desktop);
 
-
-    @media screen and (max-width: 500px) { 
+    @media (max-width: 425px) {
       left: 0;
       width: 100%;
-      height: 476px;
-    } 
+      height: size(476px, $mobile);
+      background-position-x: center;
+    }
   }
 
   &__heading {
-    width: width(600px, $desktop);
-    max-width: 600px;
+    width: size(600px, $desktop);
     position: relative;
-    top: width(194px, $desktop);
-    left: width(60px, $desktop);
-    font-family: "Yeseva One";
+    top: size(194px, $desktop);
+    left: size(60px, $desktop);
+    font-family: $yeseva;
     font-style: normal;
     font-weight: normal;
-    font-size: width(40px, $desktop);
-    line-height: width(53px, $desktop);
+    font-size: size(40px, $desktop);
+    line-height: size(53px, $desktop);
     text-transform: uppercase;
 
     color: $white;
 
-    &--yellow {
-      color: $yellow;
+    @media (max-width: 425px) {
+      margin: 0 auto;
+      width: size(339px, $mobile);
+      font-size: size(23px, $mobile);
+      left: 0;
+      line-height: 132.83%;
     }
 
-    @media screen and (max-width: 500px) { 
-      font-size: 23px;
-      line-height: 132.83%;
-      width: 339px;
-      padding-right: 20px;
-    } 
-    
+    &--yellow {
+      color: $yellow;
+
+      @media (max-width: 425px) {
+        font-size: size(23px, $mobile);
+        line-height: 132.83%;
+      }
+    }
   }
 
   &__p {
     position: relative;
-    top: width(208px, $desktop);
-    left: width(60px, $desktop);
-    width: width(504px, $desktop);
-    max-width: 504px;
+    top: size(208px, $desktop);
+    left: size(60px, $desktop);
+    width: size(504px, $desktop);
 
-    font-family: "FuturaBookC";
-    font-size: width(22px, $desktop);
-    line-height: width(30px, $desktop);
+    font-family: $futuraBookC;
+    font-size: size(22px, $desktop);
+    line-height: size(30px, $desktop);
 
     color: $white;
 
-    @media screen and (max-width: 500px) { 
-      font-size: 18px;
+    @media (max-width: 425px) {
+      box-sizing: content-box;
+      font-size: size(18px, $mobile);
       line-height: 135.84%;
-      width: 339px;
-      padding: 20px 20px 20px 0;
-    } 
+      width: size(339px, $mobile);
+      padding: size(50px, $mobile) 0 size(20px, $mobile) 0;
+      left: 0;
+      margin: 0 auto;
+    }
   }
 
   &__scroll-link {
-		display: block;
-		width: width(247px, $desktop);
-		height: width(97px, $desktop);
-		position: relative;
-		top: -49px;
-		padding-top: width(34px, $desktop);
-		padding-left: width(48px, $desktop);
-		background: $black;
-    font-family: "Yeseva One";
+    display: flex;
+    align-items: center;
+    width: size(247px, $desktop);
+    height: size(97px, $desktop);
+    position: relative;
+    top: -49px;
+    padding-top: size(0px, $desktop);
+    padding-left: size(48px, $desktop);
+    background: $black;
+    font-family: $yeseva;
     font-style: normal;
     font-weight: normal;
-    font-size: width(14px, $desktop);
-    line-height: width(19px, $desktop);
-		text-transform: uppercase;
-		text-decoration: none;
+    font-size: size(14px, $desktop);
+    line-height: size(19px, $desktop);
+    text-transform: uppercase;
+    text-decoration: none;
 
-		color: $white;
-		
-		&:hover {
-			color: $yellow;
+    color: $white;
+
+    &:hover {
+      color: $yellow;
       text-decoration: underline;
     }
 
-    @media screen and (max-width: 500px) { 
+    @media screen and (max-width: 425px) {
       display: none;
-    } 
+    }
+  }
+
+  &__scroll-icon {
+    margin-left: 12px;
+    box-sizing: border-box;
+    width: 27px;
+    height: 27px;
   }
 }

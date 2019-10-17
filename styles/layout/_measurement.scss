@@ -4,17 +4,16 @@
 .measurement {
   background: $white;
   width: 100%;
-  max-width: 1440px;
   display: flex;
   overflow: hidden;
 
-  @media screen and (max-width: 500px) { 
+  @media screen and (max-width: 425px) {
     display: none;
-  } 
-  
+  }
+
   &__stages {
-    width: width(800px, $desktop);
-    height: width(645px, $desktop);
+    width: size(800px, $desktop);
+    height: size(645px, $desktop);
 
     background-image: url(../../assets/images/building.png);
     background-repeat: no-repeat;
@@ -22,8 +21,8 @@
 
     &-circle {
       position: relative;
-      width: width(636.12px, $desktop);
-      height: width(636.12px, $desktop);
+      width: size(636.12px, $desktop);
+      height: size(636.12px, $desktop);
       top: 6%;
       left: -20%;
       border-radius: 50%;
@@ -31,68 +30,106 @@
         transparent 69%,
         $yellow 70%,
         transparent 50%
-			);
-
+      );
     }
 
-    &-div_1 {
+    &-div1 {
+      width: size(474px, $desktop);
       position: relative;
       top: -95%;
       left: 30%;
       display: flex;
       align-items: center;
-		}
-		
-		&-div_2 {
+    }
+
+    &-div2 {
+      width: size(300px, $desktop);
       position: relative;
       top: -95%;
       left: 46%;
       display: flex;
       align-items: center;
-		}
-		
-		&-div_3 {
+    }
+
+    &-div3 {
+      width: size(300px, $desktop);
       position: relative;
       top: -90%;
       left: 51%;
       display: flex;
       align-items: center;
-		}
-		
-		&-div_4 {
+    }
+
+    &-div4 {
+      width: size(374px, $desktop);
       position: relative;
       top: -85%;
-      left: 48%;
+      left: 50%;
       display: flex;
       align-items: center;
-		}
-		
+    }
+
     &-div-circle {
-      width: width(41.46px, $desktop);
-      height: width(41.46px, $desktop);
+      width: size(41.46px, $desktop);
+      height: size(41.46px, $desktop);
 
       background: $yellow;
       border-radius: 50%;
       border: 2vw solid $white;
       text-align: center;
       padding: 1%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       box-sizing: content-box;
 
-      font-family: "Yeseva One";
+      font-family: $yeseva;
       font-style: normal;
       font-weight: normal;
-      font-size: width(18px, $desktop);
-      line-height: width(25px, $desktop);
+      font-size: size(18px, $desktop);
+      line-height: size(25px, $desktop);
       color: $white;
     }
-	}
-	
-	&__wrapper {
-		width: width(509px, $desktop);
-	}
 
-	&__save {
-		display: flex;
+    &-div-text {
+      font-family: $futuraMediumC;
+      font-size: size(18px, $desktop);
+      line-height: size(21px, $desktop);
 
-	}
+      color: #363636;
+    }
+  }
+
+  &__wrapper {
+    width: size(509px, $desktop);
+  }
+
+  &__save {
+    display: flex;
+    margin-bottom: size(270px, $desktop);
+    margin-top: size(50.94px, $desktop);
+    justify-content: space-around;
+    align-items: center;
+
+    &-img {
+      width: size(72px, $desktop);
+      height: size(72px, $desktop);
+      background: $yellow;
+      border-radius: 50%;
+      box-shadow: 0 size(10px, $desktop) size(20px, $desktop) rgba(237, 192, 120, 0.2);
+      padding: size(19.48px, $desktop);
+    }
+
+    &-text {
+      width: size(344px, $desktop);
+      font-family: $futuraDemiC;
+      font-size: size(20px, $desktop);
+      line-height: size(25px, $desktop);
+
+      color: $yellow;
+
+      text-shadow: 0 size(3px, $desktop) size(10px, $desktop) rgba(227, 184, 115, 0.15);
+    }
+  }
 }
