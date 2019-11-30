@@ -2,10 +2,11 @@
 @import "../abstracts/functions";
 
 .steps {
-  width: 100%;
-  background: $black;
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
+
+  background: $black;
 
   @media screen and (max-width: $mobile-max) {
     display: none;
@@ -24,13 +25,13 @@
     }
 
     &-head {
-      font-family: $futuraDemiC;
-      font-size: size(15px, $desktop);
-      line-height: size(21px, $desktop);
-      text-transform: uppercase;
       padding-bottom: size(18px, $desktop);
 
+      font-size: size(15px, $desktop);
+      line-height: size(21px, $desktop);
+      font-family: $futuraDemiC;
       color: $white;
+      text-transform: uppercase;
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         font-size: size(11px, $tablet);
@@ -48,13 +49,13 @@
       margin-bottom: size(92px, $desktop);
 
       &-name {
-        font-family: $yeseva;
         font-style: normal;
         font-weight: normal;
         font-size: size(27px, $desktop);
         line-height: size(37px, $desktop);
-        text-transform: uppercase;
+        font-family: $yeseva;
         color: $yellow;
+        text-transform: uppercase;
 
         @media (min-width: $tablet-min) and (max-width: $tablet-max) {
           font-size: size(20px, $tablet);
@@ -65,8 +66,9 @@
         width: size(92px, $desktop);
         max-width: size(92px, $desktop);
         height: size(1px, $desktop);
-        background: $yellow;
         margin-bottom: size(15px, $desktop);
+
+        background: $yellow;
 
         @media (min-width: $tablet-min) and (max-width: $tablet-max) {
           display: none;
@@ -75,29 +77,30 @@
     }
 
     &-num {
-      font-family: $yeseva;
+      margin-bottom: size(22px, $desktop);
+
       font-style: normal;
       font-weight: normal;
       font-size: size(18px, $desktop);
       line-height: size(25px, $desktop);
-      text-transform: uppercase;
+      font-family: $yeseva;
       color: $white;
-      margin-bottom: size(22px, $desktop);
+      text-transform: uppercase;
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         font-size: size(18px, $tablet);
       }
 
       &-heading {
-        font-family: $yeseva;
+        margin-bottom: size(16px, $desktop);
+
         font-style: normal;
         font-weight: normal;
         font-size: size(15px, $desktop);
         line-height: size(23px, $desktop);
-        text-transform: uppercase;
-        margin-bottom: size(16px, $desktop);
-
+        font-family: $yeseva;
         color: $yellow;
+        text-transform: uppercase;
 
         @media (min-width: $tablet-min) and (max-width: $tablet-max) {
           font-size: size(15px, $tablet);
@@ -107,11 +110,11 @@
     }
 
     &-p {
-      font-family: $futuraBookC;
-      font-size: size(15px, $desktop);
-      line-height: size(25px, $desktop);
       margin-bottom: size(91px, $desktop);
 
+      font-size: size(15px, $desktop);
+      line-height: size(25px, $desktop);
+      font-family: $futuraBookC;
       color: $white;
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -120,11 +123,13 @@
       }
     }
   }
+
   &__arrows {
-    margin-top: size(79.64px, $desktop);
-    width: size(287px, $desktop);
     display: flex;
     justify-content: space-between;
+    width: size(287px, $desktop);
+    margin-top: size(79.64px, $desktop);
+
     cursor: pointer;
 
     &-prev {
@@ -137,6 +142,7 @@
 
     &-next {
       width: size(41.46px, $desktop);
+
       transform: rotate(-180deg);
 
       &:hover {
@@ -145,12 +151,13 @@
     }
 
     &-dot {
-      background: $white;
-      opacity: 0.3;
       width: size(10px, $desktop);
       height: size(10px, $desktop);
-      border-radius: 50%;
       margin: 0 size(8px, $desktop);
+
+      background: $white;
+      border-radius: 50%;
+      opacity: 0.3;
 
       &:hover {
         background: $yellow;
@@ -158,12 +165,13 @@
       }
 
       &--selected {
-        opacity: 1;
-        background: $white;
         width: size(10px, $desktop);
         height: size(10px, $desktop);
-        border-radius: 50%;
         margin: 0 size(8px, $desktop);
+
+        background: $white;
+        border-radius: 50%;
+        opacity: 1;
 
         &:hover {
           background: $yellow;
@@ -171,6 +179,7 @@
       }
     }
   }
+
   &__right {
     margin-top: size(60px, $desktop);
 
@@ -181,6 +190,7 @@
 
   &__steps {
     display: grid;
+
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 
     &-item {
@@ -188,10 +198,11 @@
     }
 
     &-num {
-      font-family: $yeseva;
       line-height: size(21px, $desktop);
+      font-family: $yeseva;
       color: $white;
       text-decoration: none;
+
       border-bottom: size(1px, $desktop) solid $yellow;
 
       &:hover {
@@ -200,19 +211,19 @@
     }
 
     &-txt {
+      width: size(127px, $desktop);
       margin-top: size(17px, $desktop);
       margin-bottom: size(36px, $desktop);
-      width: size(127px, $desktop);
 
-      font-family: $futuraBookC;
       font-size: size(15px, $desktop);
       line-height: size(18px, $desktop);
-
+      font-family: $futuraBookC;
       color: $white;
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        font-size: size(10px, $tablet);
         width: size(80px, $tablet);
+
+        font-size: size(10px, $tablet);
       }
     }
   }

@@ -4,14 +4,15 @@
 .online__form {
   width: size(769px, $desktop);
   margin: 0 auto;
-  font-family: $futuraBookC;
+
   font-size: size(18px, $desktop);
   line-height: size(24px, $desktop);
-
+  font-family: $futuraBookC;
   color: #363636;
 
   @media screen and (max-width: $mobile-max) {
     width: size(340px, $mobile);
+
     background: $black;
   }
 
@@ -20,9 +21,9 @@
   }
 
   &-wrapper {
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
     @media screen and (max-width: $mobile-max) {
       flex-direction: column;
@@ -37,16 +38,15 @@
   &-label {
     font-size: size(15px, $desktop);
     line-height: size(20px, $desktop);
-
+    text-align: left;
     color: rgba(54, 54, 54, 0.5);
 
     transform: rotate(-0.07deg);
-    text-align: left;
 
     @media screen and (max-width: $mobile-max) {
-      color: rgba(255, 255, 255, 0.5);
       font-size: size(15px, $mobile);
       line-height: size(20px, $mobile);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -54,25 +54,31 @@
       line-height: size(20px, $tablet);
     }
   }
+
   &-input {
-    border-top: none;
-    border-left: none;
-    border-right: none;
     width: size(231px, $desktop);
+
     font-size: size(18px, $desktop);
     line-height: size(24px, $desktop);
 
+    border-top: none;
+    border-right: none;
+    border-left: none;
+
     @media screen and (max-width: $mobile-max) {
       width: 100%;
+      margin-bottom: size(63px, $mobile);
+
       font-size: size(18px, $mobile);
       line-height: 138.72%;
-      background: $black;
       color: $white;
-      margin-bottom: size(63px, $mobile);
+
+      background: $black;
     }
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: 100%;
+
       font-size: size(15px, $tablet);
       line-height: size(20px, $tablet);
     }
@@ -84,6 +90,7 @@
         color: $white;
       }
     }
+
     &::-moz-placeholder {
       color: #363636;
 
@@ -108,27 +115,33 @@
   }
 
   &-agree {
+    position: relative;
+
+    display: block;
     width: size(285.62px, $desktop);
     margin: size(33.24px, $desktop) auto size(147.85px, $desktop);
+
     font-size: size(16px, $desktop);
     line-height: size(22px, $desktop);
-    display: block;
-    position: relative;
-    cursor: pointer;
     color: #181818;
 
+    cursor: pointer;
+
     @media screen and (max-width: $mobile-max) {
-      color: $white;
+      top: size(-80px, $mobile);
+
+      width: 100%;
+
       font-size: size(16px, $mobile);
       line-height: size(22px, $mobile);
-      top: size(-80px, $mobile);
-      width: 100%;
+      color: $white;
     }
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 43%;
+
       font-size: size(13px, $tablet);
       line-height: size(20px, $tablet);
-      width: 43%;
     }
 
     &:hover .online__form-agree-check ~ .online__form-agree-checkmark {
@@ -138,10 +151,12 @@
     &-check {
       /* Hide the browser's default checkbox */
       position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
+
       width: 0;
+      height: 0;
+
+      cursor: pointer;
+      opacity: 0;
 
       /* When the checkbox is checked, add a yellow background */
       &:checked ~ .online__form-agree-checkmark {
@@ -158,9 +173,10 @@
       position: absolute;
       top: 0;
       left: size(-10px, $desktop);
-      height: size(18px, $desktop);
 
       width: size(18px, $desktop);
+      height: size(18px, $desktop);
+
       background-color: rgba(153, 150, 150, 0.541);
 
       @media screen and (max-width: $mobile-max) {
@@ -172,30 +188,33 @@
         width: size(18px, $tablet);
         height: size(18px, $tablet);
       }
+
       /* Create the checkmark/indicator (hidden when not checked) */
       &::after {
         content: "";
         position: absolute;
-        display: none;
         left: size(5px, $desktop);
-        width: size(5px, $desktop);
 
+        display: none;
+        width: size(5px, $desktop);
         height: size(10px, $desktop);
 
         border: solid $white;
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
 
         @media screen and (max-width: $mobile-max) {
           left: size(5px, $mobile);
+
           width: size(5px, $mobile);
           height: size(10px, $mobile);
         }
 
         @media (min-width: $tablet-min) and (max-width: $tablet-max) {
           left: size(5px, $tablet);
+
           width: size(5px, $tablet);
           height: size(10px, $tablet);
         }
@@ -205,49 +224,51 @@
 }
 
 .measurement__form {
-  margin-top: size(40px, $desktop);
   width: size(506px, $desktop);
   height: size(506px, $desktop);
+  margin-top: size(40px, $desktop);
+
   background: $black;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
 
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    margin-left: size(-40px, $tablet);
     width: size(300px, $tablet);
     height: size(330px, $tablet);
+    margin-left: size(-40px, $tablet);
   }
 
   &-heading {
     width: size(293px, $desktop);
     margin: 0 auto size(39px, $desktop);
     padding-top: size(28px, $desktop);
-    font-family: $futuraDemiC;
+
     font-size: size(20px, $desktop);
     line-height: size(25px, $desktop);
+    font-family: $futuraDemiC;
     text-align: center;
-
     color: $white;
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 60%;
+
       font-size: size(14px, $tablet);
       line-height: size(20px, $tablet);
-      width: 60%;
     }
   }
 
   &-wr {
-    width: size(408px, $desktop);
-    margin: size(39px, $desktop) auto;
     display: flex;
     flex-flow: column;
+    width: size(408px, $desktop);
+    margin: size(39px, $desktop) auto;
   }
 
   &-label {
-    font-family: $futuraBookC;
-    font-size: size(15px, $desktop);
-    line-height: size(20px, $desktop);
     margin-bottom: size(7px, $desktop);
 
+    font-size: size(15px, $desktop);
+    line-height: size(20px, $desktop);
+    font-family: $futuraBookC;
     color: rgba(255, 255, 255, 0.5);
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -257,16 +278,18 @@
   }
 
   &-input {
-    font-family: $futuraMediumC;
+    padding-bottom: size(1px, $desktop);
+
     font-size: size(18px, $desktop);
     line-height: size(25px, $desktop);
-    padding-bottom: size(1px, $desktop);
+    font-family: $futuraMediumC;
     color: $white;
+
     background: $black;
     border-top: none;
-    border-left: none;
     border-right: none;
     border-bottom: size(1px, $desktop) solid rgba(255, 255, 255, 0.15);
+    border-left: none;
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       font-size: size(13px, $tablet);
@@ -276,6 +299,7 @@
     &::-webkit-input-placeholder {
       color: $white;
     }
+
     &::-moz-placeholder {
       color: $white;
     } /* Firefox 19+ */
@@ -288,35 +312,39 @@
   }
 
   &-agree {
+    position: relative;
+    top: size(-15px, $desktop);
+
+    display: block;
     width: size(285.62px, $desktop);
+    margin-left: size(75px, $desktop);
+
     font-size: size(16px, $desktop);
     line-height: size(22px, $desktop);
     font-family: $futuraBookC;
-    display: block;
     color: $white;
-    position: relative;
+
     cursor: pointer;
-    margin-left: size(75px, $desktop);
-    top: size(-15px, $desktop);
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-      font-size: size(10px, $tablet);
       width: 100%;
+
+      font-size: size(10px, $tablet);
     }
 
-    &:hover
-      .measurement__form-agree-check
-      ~ .measurement__form-agree-checkmark {
+    &:hover .measurement__form-agree-check ~ .measurement__form-agree-checkmark {
       background-color: darken($yellow, 20%);
     }
 
     &-check {
       /* Hide the browser's default checkbox */
       position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
+
       width: 0;
+      height: 0;
+
+      cursor: pointer;
+      opacity: 0;
 
       /* When the checkbox is checked, add a yellow background */
       &:checked ~ .measurement__form-agree-checkmark {
@@ -327,28 +355,33 @@
         }
       }
     }
+
     &-checkmark {
       /* Create a custom checkbox */
       position: absolute;
       top: 0;
       left: size(-27px, $desktop);
-      height: size(18px, $desktop);
+
       width: size(18px, $desktop);
+      height: size(18px, $desktop);
+
       background-color: rgba(153, 150, 150, 0.541);
 
       /* Create the checkmark/indicator (hidden when not checked) */
       &::after {
         content: "";
         position: absolute;
-        display: none;
         left: size(5px, $desktop);
+
+        display: none;
         width: size(5px, $desktop);
         height: size(10px, $desktop);
+
         border: solid $white;
         border-width: 0 size(3px, $desktop) size(3px, $desktop) 0;
         -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
       }
     }
   }
@@ -357,39 +390,44 @@
 .contact__form {
   position: relative;
   top: size(-250px, $desktop);
-  margin: 0 auto;
+
   width: size(883px, $desktop);
+  margin: 0 auto;
+
   background: #181818;
   box-shadow: 0 size(30px, $desktop) size(30px, $desktop) rgba(0, 0, 0, 0.05);
 
   @media screen and (max-width: $mobile-max) {
-    background: $black;
     width: size(340px, $mobile);
+
+    background: $black;
   }
 
   &-heading {
     width: size(257px, $desktop);
     margin: 0 auto size(45.8px, $desktop);
     padding-top: size(34.4px, $desktop);
-    font-family: $yeseva;
+
     font-size: size(20px, $desktop);
     line-height: size(28px, $desktop);
-
+    font-family: $yeseva;
     text-align: center;
-    text-transform: uppercase;
     color: $white;
+    text-transform: uppercase;
 
     @media screen and (max-width: $mobile-max) {
-      font-size: size(20px, $mobile);
-      line-height: size(28px, $mobile);
       width: size(257px, $mobile);
       padding-top: size(56px, $mobile);
+
+      font-size: size(20px, $mobile);
+      line-height: size(28px, $mobile);
     }
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(257px, $tablet);
+
       font-size: size(20px, $tablet);
       line-height: size(28px, $tablet);
-      width: size(257px, $tablet);
     }
   }
 
@@ -404,10 +442,11 @@
       width: size(340px, $mobile);
     }
   }
+
   &-wr {
-    width: size(231px, $desktop);
     display: flex;
     flex-flow: column;
+    width: size(231px, $desktop);
 
     @media screen and (max-width: $mobile-max) {
       width: 100%;
@@ -418,10 +457,10 @@
     }
 
     &--long {
-      width: size(520px, $desktop);
-      margin: size(48.76px, $desktop) auto;
       display: flex;
       flex-flow: column;
+      width: size(520px, $desktop);
+      margin: size(48.76px, $desktop) auto;
 
       @media screen and (max-width: $mobile-max) {
         width: 100%;
@@ -430,18 +469,19 @@
   }
 
   &-label {
-    font-family: $futuraBookC;
-    font-size: size(15px, $desktop);
-    line-height: size(20px, $desktop);
     margin-bottom: size(7px, $desktop);
 
+    font-size: size(15px, $desktop);
+    line-height: size(20px, $desktop);
+    font-family: $futuraBookC;
     color: rgba(255, 255, 255, 0.5);
 
     @media screen and (max-width: $mobile-max) {
+      margin-top: size(52px, $mobile);
+      margin-bottom: size(7px, $mobile);
+
       font-size: size(15px, $mobile);
       line-height: size(20px, $mobile);
-      margin-bottom: size(7px, $mobile);
-      margin-top: size(52px, $mobile);
     }
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -451,21 +491,25 @@
   }
 
   &-input {
-    font-family: $futuraBookC;
+    padding-bottom: 8px;
+
     font-size: size(18px, $desktop);
     line-height: size(24px, $desktop);
-    padding-bottom: 8px;
+    font-family: $futuraBookC;
     color: $white;
+
     background: #181818;
     border-top: none;
-    border-left: none;
     border-right: none;
     border-bottom: size(1px, $desktop) solid rgba(255, 255, 255, 0.15);
+    border-left: none;
 
     @media screen and (max-width: $mobile-max) {
+      padding-bottom: size(8px, $mobile);
+
       font-size: size(18px, $mobile);
       line-height: size(24px, $mobile);
-      padding-bottom: size(8px, $mobile);
+
       background: $black;
       border-bottom: size(1px, $mobile) solid rgba(255, 255, 255, 0.3);
     }
@@ -478,6 +522,7 @@
     &::-webkit-input-placeholder {
       color: $white;
     }
+
     &::-moz-placeholder {
       color: $white;
     } /* Firefox 19+ */
@@ -490,29 +535,34 @@
   }
 
   &-agree {
+    position: relative;
+
+    display: block;
     width: size(285.62px, $desktop);
+    margin: size(46.46px, $desktop) auto size(50.45px, $desktop);
+
     font-size: size(16px, $desktop);
     line-height: size(22px, $desktop);
     font-family: $futuraBookC;
-    display: block;
     color: $white;
-    position: relative;
+
     cursor: pointer;
-    margin: size(46.46px, $desktop) auto size(50.45px, $desktop);
 
     @media screen and (max-width: $mobile-max) {
-      font-size: size(16px, $mobile);
-      line-height: size(22px, $mobile);
       width: size(340px, $mobile);
       margin-top: size(30px, $mobile);
       margin-left: size(6px, $mobile);
       padding-left: size(20px, $mobile);
+
+      font-size: size(16px, $mobile);
+      line-height: size(22px, $mobile);
     }
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(270px, $tablet);
+
       font-size: size(16px, $tablet);
       line-height: size(22px, $tablet);
-      width: size(270px, $tablet);
     }
 
     &:hover .contact__form-agree-check ~ .contact_form-agree-checkmark {
@@ -522,10 +572,12 @@
     &-check {
       /* Hide the browser's default checkbox */
       position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
+
       width: 0;
+      height: 0;
+
+      cursor: pointer;
+      opacity: 0;
 
       /* When the checkbox is checked, add a yellow background */
       &:checked ~ .contact__form-agree-checkmark {
@@ -536,13 +588,16 @@
         }
       }
     }
+
     &-checkmark {
       /* Create a custom checkbox */
       position: absolute;
       top: 0;
       left: size(-27px, $desktop);
-      height: size(18px, $desktop);
+
       width: size(18px, $desktop);
+      height: size(18px, $desktop);
+
       background-color: rgba(153, 150, 150, 0.541);
 
       @media screen and (max-width: $mobile-max) {
@@ -551,39 +606,44 @@
       }
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        left: size(-20px, $tablet);
+
         width: size(18px, $tablet);
         height: size(18px, $tablet);
-        left: size(-20px, $tablet);
       }
 
       /* Create the checkmark/indicator (hidden when not checked) */
-      &:after {
+      &::after {
         content: "";
         position: absolute;
-        display: none;
         left: size(5px, $desktop);
-        width: size(5px, $desktop);
 
+        display: none;
+        width: size(5px, $desktop);
         height: size(10px, $desktop);
 
         border: solid $white;
         border-width: 0 size(3px, $desktop) size(3px, $desktop) 0;
         -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
 
         @media screen and (max-width: $mobile-max) {
+          left: size(5px, $mobile);
+
           width: size(5px, $mobile);
           height: size(10px, $mobile);
+
           border-width: 0 size(3px, $mobile) size(3px, $mobile) 0;
-          left: size(5px, $mobile);
         }
 
         @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+          left: size(5px, $tablet);
+
           width: size(5px, $tablet);
           height: size(10px, $tablet);
+
           border-width: 0 size(3px, $tablet) size(3px, $tablet) 0;
-          left: size(5px, $tablet);
         }
       }
     }

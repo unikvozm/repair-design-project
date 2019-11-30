@@ -3,26 +3,27 @@
 
 .clients {
   width: 100%;
+
   background-image: url("../../assets/images/clients.png");
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: bottom;
+  background-size: contain;
 
   @media screen and (max-width: $mobile-max) {
     display: none;
   }
 
   &__heading {
-    font-family: $yeseva;
+    margin-bottom: size(13.22px, $desktop);
+
     font-style: normal;
     font-weight: normal;
     font-size: size(20px, $desktop);
     line-height: size(28px, $desktop);
-    margin-bottom: size(13.22px, $desktop);
+    font-family: $yeseva;
     text-align: center;
-    text-transform: uppercase;
-
     color: #181818;
+    text-transform: uppercase;
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       font-size: size(20px, $tablet);
@@ -32,10 +33,10 @@
 
   &__picto {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 116px;
     margin: 0 auto;
-    align-items: center;
-    justify-content: space-between;
 
     &-img {
       width: 33.72px;
@@ -43,35 +44,37 @@
     }
 
     &-stick {
-      background: $yellow;
       width: 32px;
       height: 1.54px;
+
+      background: $yellow;
     }
   }
 
   &__p {
     margin-top: size(24.16px, $desktop);
     margin-bottom: size(39px, $desktop);
-    font-family: $futuraBookC;
+
     font-size: size(20px, $desktop);
     line-height: size(27px, $desktop);
+    font-family: $futuraBookC;
     text-align: center;
-
     color: #363636;
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: 40%;
-      font-size: size(16px, $tablet);
       margin: size(18px, $tablet) auto size(30px, $tablet);
+
+      font-size: size(16px, $tablet);
     }
   }
 
   &__reviews {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: size(1236px, $desktop);
     margin: 10px auto;
-    align-items: center;
-    justify-content: space-between;
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: 96%;
@@ -81,10 +84,10 @@
   &__review {
     width: size(376px, $desktop);
     margin-bottom: size(374.61px, $desktop);
+    padding: size(20px, $desktop);
 
     background: $white;
     box-shadow: 0 size(10px, $desktop) size(50px, $desktop) rgba(0, 0, 0, 0.04);
-    padding: size(20px, $desktop);
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: 32%;
@@ -99,23 +102,26 @@
   }
 
   &__details {
+    position: relative;
+    top: size(50px, $desktop);
+    left: size(-20px, $desktop);
+
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: size(293.75px, $desktop);
     height: size(54.03px, $desktop);
-    align-items: center;
-    justify-content: space-between;
-    font-family: $yeseva;
+
     font-style: normal;
     font-weight: normal;
     font-size: size(17px, $desktop);
     line-height: size(24px, $desktop);
+    font-family: $yeseva;
     color: $white;
+
     background: $yellow;
-    position: relative;
-    left: size(-20px, $desktop);
-    top: size(50px, $desktop);
     box-shadow: size(5px, $desktop) size(5px, $desktop) size(20px, $desktop) rgba(227, 184, 115, 0.5);
-  
+
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       font-size: size(15px, $tablet);
     }
@@ -136,30 +142,32 @@
   }
 
   &__name {
-    font-family: $yeseva;
+    width: size(178px, $desktop);
+    margin-left: size(23px, $desktop);
+
     font-style: normal;
     font-weight: normal;
     font-size: size(18px, $desktop);
     line-height: size(23px, $desktop);
-    width: size(178px, $desktop);
-    margin-left: size(23px, $desktop);
-
+    font-family: $yeseva;
     color: #181818;
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 100%;
+
       font-size: size(14px, $tablet);
       line-height: size(17px, $tablet);
-      width: 100%;
     }
   }
 
   &__size {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: size(135.09px, $desktop);
     height: 100%;
+
     border-right: size(1px, $desktop) solid $white;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
   }
 
   &__size-icon {
@@ -168,10 +176,10 @@
   }
 
   &__time {
-    width: size(158.66px, $desktop);
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
+    width: size(158.66px, $desktop);
   }
 
   &__time-icon {
@@ -180,10 +188,9 @@
   }
 
   &__txt {
-    font-family: $futuraBookC;
     font-size: size(15px, $desktop);
     line-height: size(27px, $desktop);
-
+    font-family: $futuraBookC;
     color: #959595;
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {

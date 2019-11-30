@@ -3,62 +3,69 @@
 
 .contact {
   width: 100%;
+
   background-image: url("./../../assets/images/contact-section.png");
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media screen and (max-width: $mobile-max) { 
-    background: $black;
-    padding-bottom: size(70px, $mobile);
+  @media screen and (max-width: $mobile-max) {
     position: relative;
-  } 
+
+    padding-bottom: size(70px, $mobile);
+
+    background: $black;
+  }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
     margin-top: -1.5%;
   }
 
   &__address {
-    font-family: $yeseva;
+    width: size(589px, $desktop);
+    margin: size(-200px, $desktop) auto size(26px, $desktop);
+
     font-style: normal;
     font-weight: normal;
     font-size: size(20px, $desktop);
     line-height: size(28px, $desktop);
+    font-family: $yeseva;
     text-align: center;
-    text-transform: uppercase;
     color: $yellow;
-    margin: size(-200px, $desktop) auto size(26px, $desktop);
-    width: size(589px, $desktop);
+    text-transform: uppercase;
 
     @media (max-width: $mobile-max) {
-      line-height: 138.6%;
-      font-size: size(18px, $mobile);
-      width: size(340px, $mobile);
-      height: size(51px, $mobile);
+      position: absolute;
       top: size(880px, $mobile);
       left: size(18px, $mobile);
+
+      width: size(340px, $mobile);
+      height: size(51px, $mobile);
       padding: 0 size(15px, $mobile);
-      position: absolute;
+
+      font-size: size(18px, $mobile);
+      line-height: 138.6%;
     }
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-      line-height: 138.6%;
-      font-size: size(15px, $tablet);
       width: size(440px, $tablet);
+
+      font-size: size(15px, $tablet);
+      line-height: 138.6%;
     }
 
     &--mobile {
       @media (max-width: $mobile-max) {
         display: block;
       }
-      
     }
   }
+
   &__icons {
+    display: flex;
+    justify-content: space-between;
     width: 71px;
     height: 28px;
     margin: 0 auto size(43px, $desktop);
-    display: flex;
-    justify-content: space-between;
 
     @media (max-width: $mobile-max) {
       position: absolute;
@@ -71,7 +78,7 @@
       height: 28px;
     }
   }
-  
+
   &__map {
     display: block;
     width: size(925px, $desktop);
@@ -81,6 +88,7 @@
     @media (max-width: $mobile-max) {
       position: relative;
       top: size(-110px, $mobile);
+
       width: size(340px, $mobile);
       height: size(255px, $mobile);
     }

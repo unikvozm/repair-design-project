@@ -2,17 +2,18 @@
 @import "../abstracts/variables";
 
 .button {
-  background-color: $yellow;
-  color: $white;
-  font-family: $futuraDemiC;
   font-size: size(13px, $desktop);
   line-height: size(15px, $desktop);
+  font-family: $futuraDemiC;
+  color: $white;
   text-transform: uppercase;
-  cursor: pointer;
+
+  background-color: $yellow;
   border: $yellow;
-  box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
-    rgba(227, 184, 115, 0.2);
   border-radius: size(2px, $desktop);
+  box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
+  rgba(227, 184, 115, 0.2);
+  cursor: pointer;
 
   &:hover,
   &:active {
@@ -20,17 +21,20 @@
   }
 
   @media (max-width: $mobile-max) {
+    display: block;
+    width: size(338.61px, $mobile);
+    padding: size(19px, $mobile) auto;
+
     font-size: size(13px, $mobile);
     line-height: size(15px, $mobile);
-    width: size(338.61px, $mobile);
-    display: block;
-    padding: size(19px, $mobile) auto;
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    padding: size(19px, $tablet) auto;
+
     font-size: size(13px, $tablet);
     line-height: size(15px, $tablet);
-    padding: size(19px, $tablet) auto;
+
     border-radius: size(2px, $tablet);
   }
 }
@@ -48,22 +52,27 @@
   position: relative;
   top: size(248px, $desktop);
   left: size(60px, $desktop);
+
   width: size(207px, $desktop);
   height: size(51px, $desktop);
+
   box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
-    rgba(227, 184, 115, 0.3);
+  rgba(227, 184, 115, 0.3);
 
   @media (max-width: $mobile-max) {
-    line-height: size(15px, $mobile);
+    left: 0;
+
     width: size(338.61px, $mobile);
     height: size(51px, $mobile);
-    left: 0;
     margin: 0 auto;
+
+    line-height: size(15px, $mobile);
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
     width: size(207px, $tablet);
     height: size(51px, $tablet);
+
     font-size: size(13px, $tablet);
     line-height: size(15px, $tablet);
   }
@@ -73,10 +82,12 @@
   position: relative;
   top: size(248px, $desktop);
   left: size(80px, $desktop);
+
   width: size(207px, $desktop);
   height: size(51px, $desktop);
-  border: size(1px, $desktop) solid $white;
+
   background-color: transparent;
+  border: size(1px, $desktop) solid $white;
 
   @media (max-width: $mobile-max) {
     display: none;
@@ -85,6 +96,7 @@
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
     width: size(207px, $tablet);
     height: size(51px, $tablet);
+
     border: size(1px, $tablet) solid $white;
   }
 
@@ -92,80 +104,94 @@
     display: none;
 
     @media (max-width: $mobile-max) {
+      position: relative;
+      top: size(90px, $mobile);
+      left: 0;
+
       display: block;
       box-sizing: border-box;
-      line-height: size(15px, $mobile);
       width: size(338.61px, $mobile);
       height: size(51px, $mobile);
+      margin: 0 auto;
 
-      top: size(90px, $mobile);
-      position: relative;
+      line-height: size(15px, $mobile);
+
       background-color: transparent;
       border: 1px solid $white;
-      left: 0;
-      margin: 0 auto;
     }
   }
 }
 
 .online__form-submit {
-  box-shadow: 0 size(15px, $desktop) size(15px, $desktop)
-    rgba(227, 184, 115, 0.15);
-  font-size: size(15px, $desktop);
-  line-height: size(26px, $desktop);
   width: size(200px, $desktop);
 
+  font-size: size(15px, $desktop);
+  line-height: size(26px, $desktop);
+
+  box-shadow: 0 size(15px, $desktop) size(15px, $desktop)
+  rgba(227, 184, 115, 0.15);
+
   @media (max-width: $mobile-max) {
-    line-height: size(26px, $mobile);
-    font-size: size(15px, $mobile);
+    position: relative;
+    top: size(50px, $mobile);
+
     width: size(340px, $mobile);
     height: size(51px, $mobile);
-    top: size(50px, $mobile);
-    position: relative;
+
+    font-size: size(15px, $mobile);
+    line-height: size(26px, $mobile);
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    width: size(150px, $tablet);
+
     font-size: size(13px, $tablet);
     line-height: size(20px, $tablet);
-    width: size(150px, $tablet);
   }
 }
 
 .measurement__form-submit {
+  position: relative;
+
+  float: right;
   width: size(213px, $desktop);
   height: size(51px, $desktop);
-  position: relative;
-  float: right;
   margin-top: size(10px, $desktop);
   margin-right: size(59px, $desktop);
   padding: size(18.72px, $desktop) auto size(19.28px, $desktop);
-  line-height: size(18px, $desktop);
-  box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
-    rgba(227, 184, 115, 0.15);
 
-    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-      margin-top: size(12px, $tablet);
-      width: size(150px, $tablet);
-    }
+  line-height: size(18px, $desktop);
+
+  box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
+  rgba(227, 184, 115, 0.15);
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    width: size(150px, $tablet);
+    margin-top: size(12px, $tablet);
+  }
 }
 
 .contact__form-submit {
+  position: relative;
+
   width: size(200px, $desktop);
   height: size(51px, $desktop);
-  position: relative;
-  margin-left: size(341.5px, $desktop);
   margin-bottom: size(34.4px, $desktop);
+  margin-left: size(341.5px, $desktop);
+
   box-shadow: 0 size(5px, $desktop) size(20px, $desktop)
-    rgba(227, 184, 115, 0.1);
+  rgba(227, 184, 115, 0.1);
 
   @media (max-width: $mobile-max) {
-    line-height: size(26px, $mobile);
-    font-size: size(15px, $mobile);
-    width: size(340px, $mobile);
-    height: size(51px, $mobile);
     top: 0;
     left: 0;
+
+    width: size(340px, $mobile);
+    height: size(51px, $mobile);
     margin: size(67.33px, $mobile) auto size(46px, $mobile);
+
+    font-size: size(15px, $mobile);
+    line-height: size(26px, $mobile);
   }
 }
 

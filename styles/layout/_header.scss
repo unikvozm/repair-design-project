@@ -5,26 +5,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $black;
   width: 100%;
   padding: size(24px, $desktop) size(100px, $desktop) size(22px, $desktop)
-    size(82px, $desktop);
-  text-transform: uppercase;
+  size(82px, $desktop);
+
   font-size: size(14px, $desktop);
   line-height: size(16px, $desktop);
+  text-transform: uppercase;
+
+  background: $black;
 
   @media (max-width: $mobile-max) {
-    font-size: size(12px, $mobile);
-    line-height: size(14px, $mobile);
     padding: size(23px, $mobile) size(18px, $mobile) size(24px, $mobile)
     size(18px, $mobile);
+
+    font-size: size(12px, $mobile);
+    line-height: size(14px, $mobile);
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    font-size: size(12px, $tablet);
-    line-height: size(14px, $tablet);
     padding: size(23px, $tablet) size(18px, $tablet) size(24px, $tablet)
     size(18px, $tablet);
+
+    font-size: size(12px, $tablet);
+    line-height: size(14px, $tablet);
   }
 
   &__heading {
@@ -33,8 +37,8 @@
   }
 
   &__tel {
-    color: $yellow;
     font-family: $futuraDemiC;
+    color: $yellow;
 
     @media screen and (max-width: $mobile-max) {
       color: $white;
@@ -44,6 +48,7 @@
   &__call {
     @media screen and (max-width: $mobile-max) {
       display: none;
+
       text-decoration: none;
     }
 
@@ -56,7 +61,7 @@
     display: flex;
     justify-content: space-between;
     width: size(581.43px, $desktop);
-  
+
     @media (max-width: $mobile-max) {
       display: none;
     }
@@ -64,31 +69,30 @@
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: size(380px, $tablet);
     }
-    
+
     &-item {
       display: block;
+
       font-family: $futuraBookC;
     }
-  
+
     &-link {
-      text-decoration: none;
       color: $white;
-  
+      text-decoration: none;
+
       &--active {
-        text-decoration: none;
         color: $yellow;
-        
+        text-decoration: none;
+
         &:hover {
           text-decoration: underline;
         }
       }
-  
+
       &:hover {
         color: $yellow;
         text-decoration: underline;
       }
     }
   }
-  
 }
-

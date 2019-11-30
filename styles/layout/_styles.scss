@@ -2,25 +2,27 @@
 @import "../abstracts/functions";
 
 .styles {
-  width: 100%;
-  background-image: url("../../assets/images/styles.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: space-around;
   align-content: center;
+  width: 100%;
   height: size(864px, $desktop);
+
+  background-image: url("../../assets/images/styles.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media screen and (max-width: $mobile-max) {
     display: block;
-    background-image: linear-gradient(
-      to bottom,
-      $white,
-      $white 60%,
-      $black 60%,
-      $black 100%
-    );
     height: 100%;
+
+    background-image: linear-gradient(
+    to bottom,
+    $white,
+    $white 60%,
+    $black 60%,
+    $black 100%
+    );
   }
 
   &__ul {
@@ -46,6 +48,7 @@
       display: none;
     }
   }
+
   &__block3 {
     width: size(400px, $desktop);
 
@@ -56,22 +59,24 @@
 
   &__heading {
     margin-top: size(137px, $desktop);
-    font-family: $yeseva;
+    margin-bottom: 10%;
+
     font-style: normal;
     font-weight: normal;
     font-size: size(27px, $desktop);
     line-height: size(37px, $desktop);
-    text-transform: uppercase;
+    font-family: $yeseva;
     color: $yellow;
-    margin-bottom: 10%;
+    text-transform: uppercase;
 
     @media screen and (max-width: $mobile-max) {
-      font-size: size(22px, $mobile);
-      line-height: 138.6%;
       width: size(340px, $mobile);
       margin: 0 auto;
-      text-align: center;
       margin-bottom: size(24px, $mobile);
+
+      font-size: size(22px, $mobile);
+      line-height: 138.6%;
+      text-align: center;
     }
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -81,10 +86,9 @@
   }
 
   &__li {
-    font-family: $proxima;
     font-size: size(20px, $desktop);
     line-height: size(34px, $desktop);
-
+    font-family: $proxima;
     color: $white;
 
     cursor: pointer;
@@ -95,10 +99,9 @@
     }
 
     &--selected {
-      font-family: $proxima;
       font-size: size(20px, $desktop);
       line-height: size(34px, $desktop);
-
+      font-family: $proxima;
       color: $yellow;
       text-decoration: underline;
 
@@ -114,6 +117,7 @@
   &__img1 {
     position: relative;
     top: -4%;
+
     width: size(354.81px, $desktop);
     height: size(556.86px, $desktop);
 
@@ -125,6 +129,7 @@
   &__img2 {
     position: relative;
     top: 3%;
+
     width: size(353.81px, $desktop);
     height: size(349.47px, $desktop);
     margin-bottom: size(112.47px, $desktop);
@@ -137,6 +142,7 @@
   &__img3 {
     position: relative;
     top: -13%;
+
     width: size(354px, $desktop);
     height: size(275px, $desktop);
   }
@@ -144,6 +150,7 @@
   &__img4 {
     position: relative;
     top: -7%;
+
     width: size(353.81px, $desktop);
     height: size(625.23px, $desktop);
   }
@@ -152,53 +159,60 @@
     display: none;
 
     @media screen and (max-width: $mobile-max) {
-      display: block;
       position: relative;
+
+      display: block;
     }
 
     &-next {
       position: absolute;
-      width: size(54.72px, $desktop);
-      left: 90%;
       top: 40%;
+      left: 90%;
+
+      width: size(54.72px, $desktop);
+      padding: size(19.03px, $desktop) size(21.41px, $desktop);
+
       background: $yellow;
       border-radius: 50%;
       box-shadow: 0 0 size(15px, $desktop) rgba(227, 184, 115, 0.5);
-      padding: size(19.03px, $desktop) size(21.41px, $desktop);
 
       &:hover {
         opacity: 0.7;
       }
 
       @media screen and (max-width: $mobile-max) {
+        left: 80%;
+
         width: size(36px, $mobile);
         height: size(36px, $mobile);
-        left: 80%;
         padding: size(12.52px, $mobile) size(14.09px, $mobile);
       }
     }
 
     &-prev {
-      display: none;
-      transform: rotate(180deg);
       position: absolute;
-      width: size(54.72px, $desktop);
-      left: 0%;
       top: 40%;
+      left: 0;
+
+      display: none;
+      width: size(54.72px, $desktop);
+      padding: size(19.03px, $desktop) size(21.41px, $desktop);
+
       background: $yellow;
       border-radius: 50%;
       box-shadow: 0 0 size(15px, $desktop) rgba(227, 184, 115, 0.5);
-      padding: size(19.03px, $desktop) size(21.41px, $desktop);
+      transform: rotate(180deg);
 
       &:hover {
         opacity: 0.7;
       }
 
       @media screen and (max-width: $mobile-max) {
+        left: 10%;
+
         display: inline;
         width: size(36px, $mobile);
         height: size(36px, $mobile);
-        left: 10%;
         padding: size(12.52px, $mobile) size(14.09px, $mobile);
       }
     }

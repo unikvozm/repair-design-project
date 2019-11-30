@@ -2,18 +2,19 @@
 @import "../abstracts/functions";
 
 .measurement {
-  background: $white;
-  width: 100%;
   display: flex;
+  width: 100%;
   overflow: hidden;
+
+  background: $white;
 
   @media screen and (max-width: $mobile-max) {
     display: none;
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    width: 95%;
     justify-content: space-between;
+    width: 95%;
   }
 
   &__stages {
@@ -25,31 +26,35 @@
     background-size: contain;
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-      background-image: none;
       margin-left: size(-100px, $tablet);
+
+      background-image: none;
     }
 
     &-circle {
       position: relative;
-      width: size(636.12px, $desktop);
-      height: size(636.12px, $desktop);
       top: 6%;
       left: -20%;
-      border-radius: 50%;
+
+      width: size(636.12px, $desktop);
+      height: size(636.12px, $desktop);
+
       background-image: radial-gradient(
-        transparent 69%,
-        $yellow 70%,
-        transparent 50%
+      transparent 69%,
+      $yellow 70%,
+      transparent 50%
       );
+      border-radius: 50%;
     }
 
     &-div1 {
-      width: size(474px, $desktop);
       position: relative;
       top: -95%;
       left: 30%;
+
       display: flex;
       align-items: center;
+      width: size(474px, $desktop);
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: size(400px, $tablet);
@@ -57,12 +62,13 @@
     }
 
     &-div2 {
-      width: size(300px, $desktop);
       position: relative;
       top: -95%;
       left: 46%;
+
       display: flex;
       align-items: center;
+      width: size(300px, $desktop);
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: size(300px, $tablet);
@@ -70,12 +76,13 @@
     }
 
     &-div3 {
-      width: size(300px, $desktop);
       position: relative;
       top: -90%;
       left: 51%;
+
       display: flex;
       align-items: center;
+      width: size(300px, $desktop);
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: size(300px, $tablet);
@@ -83,12 +90,13 @@
     }
 
     &-div4 {
-      width: size(374px, $desktop);
       position: relative;
       top: -85%;
       left: 50%;
+
       display: flex;
       align-items: center;
+      width: size(374px, $desktop);
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: size(300px, $tablet);
@@ -96,25 +104,25 @@
     }
 
     &-div-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: content-box;
       width: size(41.46px, $desktop);
       height: size(41.46px, $desktop);
-
-      background: $yellow;
-      border-radius: 50%;
-      border: 2vw solid $white;
-      text-align: center;
       padding: 1%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-sizing: content-box;
 
-      font-family: $yeseva;
       font-style: normal;
       font-weight: normal;
       font-size: size(18px, $desktop);
       line-height: size(25px, $desktop);
+      font-family: $yeseva;
+      text-align: center;
       color: $white;
+
+      background: $yellow;
+      border: 2vw solid $white;
+      border-radius: 50%;
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         font-size: size(15px, $tablet);
@@ -122,10 +130,9 @@
     }
 
     &-div-text {
-      font-family: $futuraMediumC;
       font-size: size(18px, $desktop);
       line-height: size(21px, $desktop);
-
+      font-family: $futuraMediumC;
       color: #363636;
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
@@ -141,10 +148,10 @@
 
   &__save {
     display: flex;
-    margin-bottom: size(270px, $desktop);
-    margin-top: size(50.94px, $desktop);
     justify-content: space-around;
     align-items: center;
+    margin-top: size(50.94px, $desktop);
+    margin-bottom: size(270px, $desktop);
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: 100%;
@@ -154,10 +161,11 @@
     &-img {
       width: size(72px, $desktop);
       height: size(72px, $desktop);
+      padding: size(19.48px, $desktop);
+
       background: $yellow;
       border-radius: 50%;
       box-shadow: 0 size(10px, $desktop) size(20px, $desktop) rgba(237, 192, 120, 0.2);
-      padding: size(19.48px, $desktop);
 
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         width: size(52px, $tablet);
@@ -167,18 +175,16 @@
 
     &-text {
       width: size(344px, $desktop);
-      font-family: $futuraDemiC;
+
       font-size: size(20px, $desktop);
       line-height: size(25px, $desktop);
-
+      font-family: $futuraDemiC;
       color: $yellow;
-
       text-shadow: 0 size(3px, $desktop) size(10px, $desktop) rgba(227, 184, 115, 0.15);
-      
+
       @media (min-width: $tablet-min) and (max-width: $tablet-max) {
         font-size: size(15px, $tablet);
       }
-    
     }
   }
 }

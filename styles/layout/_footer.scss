@@ -5,20 +5,23 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: $black;
   width: 100%;
   padding: size(48px, $desktop) size(91px, $desktop);
-  text-transform: uppercase;
+
   font-size: size(14px, $desktop);
   line-height: size(16px, $desktop);
+  text-transform: uppercase;
+
+  background: $black;
 
   @media screen and (max-width: $mobile-max) {
     display: none;
   }
 
   @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-    font-size: size(12px, $tablet);
     padding: 2%;
+
+    font-size: size(12px, $tablet);
   }
 
   &__heading {
@@ -27,12 +30,12 @@
 
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       width: size(170px, $tablet);
-    }    
+    }
   }
 
   &__tel {
-    color: $yellow;
     font-family: $futuraDemiC;
+    color: $yellow;
   }
 
   &__nav {
@@ -48,16 +51,17 @@
 
     &-item {
       display: block;
+
       font-family: $futuraBookC;
     }
 
     &-link {
-      text-decoration: none;
       color: $white;
+      text-decoration: none;
 
       &--active {
-        text-decoration: none;
         color: $yellow;
+        text-decoration: none;
       }
 
       &:hover {
