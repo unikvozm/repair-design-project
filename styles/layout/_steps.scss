@@ -7,13 +7,21 @@
   display: flex;
   justify-content: space-evenly;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobile-max) {
     display: none;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    justify-content: space-between;
   }
 
   &__left {
     width: size(337px, $desktop);
     margin-left: size(50px, $desktop);
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(280px, $tablet);
+    }
 
     &-head {
       font-family: $futuraDemiC;
@@ -23,6 +31,14 @@
       padding-bottom: size(18px, $desktop);
 
       color: $white;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(11px, $tablet);
+      }
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(11px, $tablet);
+      }
     }
 
     &-heading {
@@ -39,6 +55,10 @@
         line-height: size(37px, $desktop);
         text-transform: uppercase;
         color: $yellow;
+
+        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+          font-size: size(20px, $tablet);
+        }
       }
 
       &-stick {
@@ -47,6 +67,10 @@
         height: size(1px, $desktop);
         background: $yellow;
         margin-bottom: size(15px, $desktop);
+
+        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+          display: none;
+        }
       }
     }
 
@@ -60,6 +84,10 @@
       color: $white;
       margin-bottom: size(22px, $desktop);
 
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(18px, $tablet);
+      }
+
       &-heading {
         font-family: $yeseva;
         font-style: normal;
@@ -70,6 +98,11 @@
         margin-bottom: size(16px, $desktop);
 
         color: $yellow;
+
+        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+          font-size: size(15px, $tablet);
+          line-height: size(20px, $tablet);
+        }
       }
     }
 
@@ -80,6 +113,11 @@
       margin-bottom: size(91px, $desktop);
 
       color: $white;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(12px, $tablet);
+        line-height: size(18px, $tablet);
+      }
     }
   }
   &__arrows {
@@ -87,6 +125,7 @@
     width: size(287px, $desktop);
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 
     &-prev {
       width: size(41.46px, $desktop);
@@ -117,6 +156,7 @@
         background: $yellow;
         opacity: 1;
       }
+
       &--selected {
         opacity: 1;
         background: $white;
@@ -133,6 +173,10 @@
   }
   &__right {
     margin-top: size(60px, $desktop);
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      margin-right: 2%;
+    }
   }
 
   &__steps {
@@ -165,6 +209,11 @@
       line-height: size(18px, $desktop);
 
       color: $white;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(10px, $tablet);
+        width: size(80px, $tablet);
+      }
     }
   }
 
@@ -172,5 +221,10 @@
     width: size(765px, $desktop);
     height: size(376.64px, $desktop);
     margin-top: size(44.33px, $desktop);
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(382.5px, $tablet);
+      height: size(188.32px, $tablet);
+    }
   }
 }

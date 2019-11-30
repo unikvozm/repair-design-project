@@ -12,17 +12,22 @@
   font-size: size(14px, $desktop);
   line-height: size(16px, $desktop);
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobile-max) {
     display: none;
   }
 
-  &__nav {
-    margin-left: size(95.47px, $desktop);
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    font-size: size(12px, $tablet);
+    padding: 2%;
   }
 
   &__heading {
     font-family: $futuraDemiC;
     color: $yellow;
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(170px, $tablet);
+    }    
   }
 
   &__tel {
@@ -34,6 +39,12 @@
     display: flex;
     justify-content: space-between;
     width: size(581.43px, $desktop);
+    margin-left: size(95.47px, $desktop);
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(420px, $tablet);
+      margin-left: 0;
+    }
 
     &-item {
       display: block;

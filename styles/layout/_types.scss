@@ -16,57 +16,61 @@
 
     color: #181818;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       margin-top: size(58px, $mobile);
       margin-bottom: size(17px, $mobile);
       font-size: size(22px, $mobile);
       line-height: 138.6%;
     }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(22px, $tablet);
+      line-height: size(28px, $tablet);
+      margin-bottom: size(17px, $tablet);
+    }
   }
 
   &__picto {
     display: flex;
-    width: size(114px, $desktop);
-    margin: size(13px, $desktop) auto;
+    width: 114px;
+    margin: 13px auto;
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (max-width: 425px) {
-      width: size(114px, $mobile);
+    @media screen and (max-width: $mobile-max) {
       margin-bottom: size(40px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      margin-bottom: size(30px, $tablet);
     }
 
     &-stick {
       background: $yellow;
-      width: size(32px, $desktop);
-      height: size(1.54px, $desktop);
-
-      @media screen and (max-width: 425px) {
-        width: size(32px, $mobile);
-        height: size(1.54px, $mobile);
-      }
+      width: 32px;
+      height: 1.54px;
     }
 
     &-icon {
-      width: size(28px, $desktop);
-      height: size(28px, $desktop);
-
-      @media screen and (max-width: 425px) {
-        width: size(28px, $mobile);
-        height: size(28px, $mobile);
-      }
+      width: 28px;
+      height: 28px;
     }
   }
 
   &__block {
     width: size(1236px, $desktop);
     margin: 0 auto;
-    display: grid;
-    grid-template: 1fr / repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: block;
       width: size(340px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 95%;
+      margin-left: 4%;
     }
 
     &-item {
@@ -77,9 +81,13 @@
       width: size(392px, $desktop);
       height: size(421px, $desktop);
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         width: 100%;
         height: size(365.15px, $mobile);
+      }
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: 90%;
       }
     }
 
@@ -94,13 +102,17 @@
       left: size(31px, $desktop);
       padding: size(25px, $desktop) size(31px, $desktop) size(50px, $desktop);
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         width: size(270px, $mobile);
         height: size(241px, $mobile);
         box-shadow: size(5px, $mobile) size(10px, $mobile) size(20px, $mobile)
           rgba(0, 0, 0, 0.05);
         top: size(-145px, $mobile);
         left: 0;
+      }
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: 76%;
       }
     }
 
@@ -113,11 +125,17 @@
 
       color: #363636;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         font-size: size(15px, $mobile);
         line-height: 138.6%;
         padding: size(21px, $mobile) size(47px, $mobile) size(10px, $mobile)
           size(31px, $mobile);
+      }
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(15px, $tablet);
+        line-height: 138.6%;
+        margin-bottom: 4%;
       }
     }
 
@@ -129,10 +147,15 @@
 
       color: #959595;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         font-size: size(13px, $mobile);
         line-height: 169.8%;
         padding-left: size(31px, $mobile);
+      }
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(11px, $tablet);
+        line-height: 138.6%;
       }
     }
 
@@ -156,7 +179,7 @@
       padding-top: 4%;
       margin-bottom: 15%;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         position: absolute;
         font-size: size(15px, $mobile);
         line-height: 138.6%;
@@ -167,6 +190,11 @@
         left: 0;
         box-shadow: size(5px, $mobile) size(5px, $mobile) size(10px, $mobile)
           rgba(227, 184, 115, 0.3);
+      }
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(11px, $tablet);
+        line-height: 160%;
       }
     }
   }

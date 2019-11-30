@@ -8,7 +8,7 @@
   background: $black;
   overflow: hidden;
 
-  @media (max-width: 425px) {
+  @media (max-width: $mobile-max) {
     height: size(476px, $mobile);
   }
 
@@ -19,7 +19,11 @@
 
     transform: rotate(90deg);
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       display: none;
     }
   }
@@ -59,11 +63,16 @@
     background-repeat: no-repeat;
     width: size(1356px, $desktop);
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
       left: 0;
       width: 100%;
       height: size(476px, $mobile);
       background-position-x: center;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      left: 0;
+      width: 100%;
     }
   }
 
@@ -81,7 +90,7 @@
 
     color: $white;
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
       margin: 0 auto;
       width: size(339px, $mobile);
       font-size: size(23px, $mobile);
@@ -89,10 +98,17 @@
       line-height: 132.83%;
     }
 
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(430px, $tablet);
+      font-size: size(33px, $tablet);
+      line-height: 132.83%;
+      top: size(80px, $tablet);
+    }
+
     &--yellow {
       color: $yellow;
 
-      @media (max-width: 425px) {
+      @media (max-width: $mobile-max) {
         font-size: size(23px, $mobile);
         line-height: 132.83%;
       }
@@ -111,7 +127,7 @@
 
     color: $white;
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
       box-sizing: content-box;
       font-size: size(18px, $mobile);
       line-height: 135.84%;
@@ -119,6 +135,13 @@
       padding: size(50px, $mobile) 0 size(20px, $mobile) 0;
       left: 0;
       margin: 0 auto;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(380px, $tablet);
+      font-size: size(18px, $tablet);
+      line-height: 132.83%;
+      top: size(90px, $tablet);
     }
   }
 
@@ -129,7 +152,7 @@
     height: size(97px, $desktop);
     position: relative;
     top: -49px;
-    padding-top: size(0px, $desktop);
+    padding-top: 0;
     padding-left: size(48px, $desktop);
     background: $black;
     font-family: $yeseva;
@@ -147,7 +170,11 @@
       text-decoration: underline;
     }
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
       display: none;
     }
   }

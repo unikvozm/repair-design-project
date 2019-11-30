@@ -7,17 +7,27 @@
   display: flex;
   overflow: hidden;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobile-max) {
     display: none;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    width: 95%;
+    justify-content: space-between;
   }
 
   &__stages {
     width: size(800px, $desktop);
     height: size(645px, $desktop);
 
-    background-image: url(../../assets/images/building.png);
+    background-image: url("../../assets/images/building.png");
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      background-image: none;
+      margin-left: size(-100px, $tablet);
+    }
 
     &-circle {
       position: relative;
@@ -40,6 +50,10 @@
       left: 30%;
       display: flex;
       align-items: center;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: size(400px, $tablet);
+      }
     }
 
     &-div2 {
@@ -49,6 +63,10 @@
       left: 46%;
       display: flex;
       align-items: center;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: size(300px, $tablet);
+      }
     }
 
     &-div3 {
@@ -58,6 +76,10 @@
       left: 51%;
       display: flex;
       align-items: center;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: size(300px, $tablet);
+      }
     }
 
     &-div4 {
@@ -67,6 +89,10 @@
       left: 50%;
       display: flex;
       align-items: center;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: size(300px, $tablet);
+      }
     }
 
     &-div-circle {
@@ -81,7 +107,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       box-sizing: content-box;
 
       font-family: $yeseva;
@@ -90,6 +115,10 @@
       font-size: size(18px, $desktop);
       line-height: size(25px, $desktop);
       color: $white;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(15px, $tablet);
+      }
     }
 
     &-div-text {
@@ -98,6 +127,11 @@
       line-height: size(21px, $desktop);
 
       color: #363636;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(15px, $tablet);
+        line-height: size(18px, $tablet);
+      }
     }
   }
 
@@ -112,6 +146,11 @@
     justify-content: space-around;
     align-items: center;
 
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 100%;
+      margin-left: -20%;
+    }
+
     &-img {
       width: size(72px, $desktop);
       height: size(72px, $desktop);
@@ -119,6 +158,11 @@
       border-radius: 50%;
       box-shadow: 0 size(10px, $desktop) size(20px, $desktop) rgba(237, 192, 120, 0.2);
       padding: size(19.48px, $desktop);
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: size(52px, $tablet);
+        height: size(52px, $tablet);
+      }
     }
 
     &-text {
@@ -130,6 +174,11 @@
       color: $yellow;
 
       text-shadow: 0 size(3px, $desktop) size(10px, $desktop) rgba(227, 184, 115, 0.15);
+      
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(15px, $tablet);
+      }
+    
     }
   }
 }

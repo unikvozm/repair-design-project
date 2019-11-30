@@ -7,11 +7,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media screen and (max-width: 425px) { 
+  @media screen and (max-width: $mobile-max) { 
     background: $black;
     padding-bottom: size(70px, $mobile);
     position: relative;
   } 
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    margin-top: -1.5%;
+  }
 
   &__address {
     font-family: $yeseva;
@@ -25,7 +29,7 @@
     margin: size(-200px, $desktop) auto size(26px, $desktop);
     width: size(589px, $desktop);
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
       line-height: 138.6%;
       font-size: size(18px, $mobile);
       width: size(340px, $mobile);
@@ -36,33 +40,35 @@
       position: absolute;
     }
 
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      line-height: 138.6%;
+      font-size: size(15px, $tablet);
+      width: size(440px, $tablet);
+    }
+
     &--mobile {
-      @media (max-width: 425px) {
+      @media (max-width: $mobile-max) {
         display: block;
       }
       
     }
   }
   &__icons {
-    width: size(71px, $desktop);
-    min-width: 71px;
-    min-height: 28px;
-    height: size(28px, $desktop);
+    width: 71px;
+    height: 28px;
     margin: 0 auto size(43px, $desktop);
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
       position: absolute;
       top: size(930px, $mobile);
       left: size(139px, $mobile);
     }
 
     &-icon {
-      width: size(28px, $desktop);
-      height: size(28px, $desktop);
-      min-width: 28px;
-      min-height: 28px;
+      width: 28px;
+      height: 28px;
     }
   }
   
@@ -72,7 +78,7 @@
     height: size(465px, $desktop);
     margin: 0 auto;
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
       position: relative;
       top: size(-110px, $mobile);
       width: size(340px, $mobile);

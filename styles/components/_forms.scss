@@ -10,9 +10,13 @@
 
   color: #363636;
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobile-max) {
     width: size(340px, $mobile);
     background: $black;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    width: 75%;
   }
 
   &-wrapper {
@@ -20,7 +24,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       flex-direction: column;
     }
   }
@@ -39,10 +43,15 @@
     transform: rotate(-0.07deg);
     text-align: left;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       color: rgba(255, 255, 255, 0.5);
       font-size: size(15px, $mobile);
       line-height: size(20px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(15px, $tablet);
+      line-height: size(20px, $tablet);
     }
   }
   &-input {
@@ -53,7 +62,7 @@
     font-size: size(18px, $desktop);
     line-height: size(24px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       width: 100%;
       font-size: size(18px, $mobile);
       line-height: 138.72%;
@@ -62,31 +71,37 @@
       margin-bottom: size(63px, $mobile);
     }
 
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 100%;
+      font-size: size(15px, $tablet);
+      line-height: size(20px, $tablet);
+    }
+
     &::-webkit-input-placeholder {
       color: #363636;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         color: $white;
       }
     }
     &::-moz-placeholder {
       color: #363636;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         color: $white;
       }
     } /* Firefox 19+ */
     &:-moz-placeholder {
       color: #363636;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         color: $white;
       }
     } /* Firefox 18- */
     &:-ms-input-placeholder {
       color: #363636;
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         color: $white;
       }
     }
@@ -102,12 +117,18 @@
     cursor: pointer;
     color: #181818;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       color: $white;
       font-size: size(16px, $mobile);
       line-height: size(22px, $mobile);
       top: size(-80px, $mobile);
       width: 100%;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(13px, $tablet);
+      line-height: size(20px, $tablet);
+      width: 43%;
     }
 
     &:hover .online__form-agree-check ~ .online__form-agree-checkmark {
@@ -126,7 +147,7 @@
       &:checked ~ .online__form-agree-checkmark {
         background-color: $yellow;
 
-        &:after {
+        &::after {
           display: block;
         }
       }
@@ -142,13 +163,17 @@
       width: size(18px, $desktop);
       background-color: rgba(153, 150, 150, 0.541);
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         width: size(18px, $mobile);
         height: size(18px, $mobile);
       }
 
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: size(18px, $tablet);
+        height: size(18px, $tablet);
+      }
       /* Create the checkmark/indicator (hidden when not checked) */
-      &:after {
+      &::after {
         content: "";
         position: absolute;
         display: none;
@@ -163,10 +188,16 @@
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
 
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: $mobile-max) {
           left: size(5px, $mobile);
           width: size(5px, $mobile);
           height: size(10px, $mobile);
+        }
+
+        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+          left: size(5px, $tablet);
+          width: size(5px, $tablet);
+          height: size(10px, $tablet);
         }
       }
     }
@@ -178,7 +209,13 @@
   width: size(506px, $desktop);
   height: size(506px, $desktop);
   background: $black;
-  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    margin-left: size(-40px, $tablet);
+    width: size(300px, $tablet);
+    height: size(330px, $tablet);
+  }
 
   &-heading {
     width: size(293px, $desktop);
@@ -190,6 +227,12 @@
     text-align: center;
 
     color: $white;
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(14px, $tablet);
+      line-height: size(20px, $tablet);
+      width: 60%;
+    }
   }
 
   &-wr {
@@ -206,6 +249,11 @@
     margin-bottom: size(7px, $desktop);
 
     color: rgba(255, 255, 255, 0.5);
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(13px, $tablet);
+      line-height: size(15px, $tablet);
+    }
   }
 
   &-input {
@@ -219,6 +267,11 @@
     border-left: none;
     border-right: none;
     border-bottom: size(1px, $desktop) solid rgba(255, 255, 255, 0.15);
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(13px, $tablet);
+      line-height: size(20px, $tablet);
+    }
 
     &::-webkit-input-placeholder {
       color: $white;
@@ -246,6 +299,11 @@
     margin-left: size(75px, $desktop);
     top: size(-15px, $desktop);
 
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(10px, $tablet);
+      width: 100%;
+    }
+
     &:hover
       .measurement__form-agree-check
       ~ .measurement__form-agree-checkmark {
@@ -264,7 +322,7 @@
       &:checked ~ .measurement__form-agree-checkmark {
         background-color: $yellow;
 
-        &:after {
+        &::after {
           display: block;
         }
       }
@@ -279,7 +337,7 @@
       background-color: rgba(153, 150, 150, 0.541);
 
       /* Create the checkmark/indicator (hidden when not checked) */
-      &:after {
+      &::after {
         content: "";
         position: absolute;
         display: none;
@@ -304,7 +362,7 @@
   background: #181818;
   box-shadow: 0 size(30px, $desktop) size(30px, $desktop) rgba(0, 0, 0, 0.05);
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobile-max) {
     background: $black;
     width: size(340px, $mobile);
   }
@@ -321,11 +379,17 @@
     text-transform: uppercase;
     color: $white;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(20px, $mobile);
       line-height: size(28px, $mobile);
       width: size(257px, $mobile);
       padding-top: size(56px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(20px, $tablet);
+      line-height: size(28px, $tablet);
+      width: size(257px, $tablet);
     }
   }
 
@@ -335,7 +399,7 @@
     width: size(520px, $desktop);
     margin: 0 auto;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       flex-direction: column;
       width: size(340px, $mobile);
     }
@@ -345,8 +409,12 @@
     display: flex;
     flex-flow: column;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       width: 100%;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 80%;
     }
 
     &--long {
@@ -354,7 +422,8 @@
       margin: size(48.76px, $desktop) auto;
       display: flex;
       flex-flow: column;
-      @media screen and (max-width: 425px) {
+
+      @media screen and (max-width: $mobile-max) {
         width: 100%;
       }
     }
@@ -368,11 +437,16 @@
 
     color: rgba(255, 255, 255, 0.5);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(15px, $mobile);
       line-height: size(20px, $mobile);
       margin-bottom: size(7px, $mobile);
       margin-top: size(52px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(15px, $tablet);
+      line-height: size(20px, $tablet);
     }
   }
 
@@ -388,12 +462,17 @@
     border-right: none;
     border-bottom: size(1px, $desktop) solid rgba(255, 255, 255, 0.15);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(18px, $mobile);
       line-height: size(24px, $mobile);
       padding-bottom: size(8px, $mobile);
       background: $black;
       border-bottom: size(1px, $mobile) solid rgba(255, 255, 255, 0.3);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(18px, $tablet);
+      line-height: size(24px, $tablet);
     }
 
     &::-webkit-input-placeholder {
@@ -421,13 +500,19 @@
     cursor: pointer;
     margin: size(46.46px, $desktop) auto size(50.45px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(16px, $mobile);
       line-height: size(22px, $mobile);
       width: size(340px, $mobile);
       margin-top: size(30px, $mobile);
       margin-left: size(6px, $mobile);
       padding-left: size(20px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(16px, $tablet);
+      line-height: size(22px, $tablet);
+      width: size(270px, $tablet);
     }
 
     &:hover .contact__form-agree-check ~ .contact_form-agree-checkmark {
@@ -446,7 +531,7 @@
       &:checked ~ .contact__form-agree-checkmark {
         background-color: $yellow;
 
-        &:after {
+        &::after {
           display: block;
         }
       }
@@ -460,10 +545,17 @@
       width: size(18px, $desktop);
       background-color: rgba(153, 150, 150, 0.541);
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         width: size(18px, $mobile);
         height: size(18px, $mobile);
       }
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: size(18px, $tablet);
+        height: size(18px, $tablet);
+        left: size(-20px, $tablet);
+      }
+
       /* Create the checkmark/indicator (hidden when not checked) */
       &:after {
         content: "";
@@ -480,11 +572,18 @@
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
 
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: $mobile-max) {
           width: size(5px, $mobile);
           height: size(10px, $mobile);
           border-width: 0 size(3px, $mobile) size(3px, $mobile) 0;
           left: size(5px, $mobile);
+        }
+
+        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+          width: size(5px, $tablet);
+          height: size(10px, $tablet);
+          border-width: 0 size(3px, $tablet) size(3px, $tablet) 0;
+          left: size(5px, $tablet);
         }
       }
     }

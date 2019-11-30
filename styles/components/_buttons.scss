@@ -14,16 +14,24 @@
     rgba(227, 184, 115, 0.2);
   border-radius: size(2px, $desktop);
 
-  &:hover {
+  &:hover,
+  &:active {
     background-color: darken($yellow, 20%);
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: $mobile-max) {
     font-size: size(13px, $mobile);
     line-height: size(15px, $mobile);
     width: size(338.61px, $mobile);
     display: block;
     padding: size(19px, $mobile) auto;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    font-size: size(13px, $tablet);
+    line-height: size(15px, $tablet);
+    padding: size(19px, $tablet) auto;
+    border-radius: size(2px, $tablet);
   }
 }
 
@@ -31,7 +39,7 @@
   width: size(161px, $desktop);
   height: size(37px, $desktop);
 
-  @media (max-width: 425px) {
+  @media (max-width: $mobile-max) {
     display: none;
   }
 }
@@ -45,12 +53,19 @@
   box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
     rgba(227, 184, 115, 0.3);
 
-  @media (max-width: 425px) {
+  @media (max-width: $mobile-max) {
     line-height: size(15px, $mobile);
     width: size(338.61px, $mobile);
     height: size(51px, $mobile);
     left: 0;
     margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    width: size(207px, $tablet);
+    height: size(51px, $tablet);
+    font-size: size(13px, $tablet);
+    line-height: size(15px, $tablet);
   }
 }
 
@@ -63,14 +78,20 @@
   border: size(1px, $desktop) solid $white;
   background-color: transparent;
 
-  @media (max-width: 425px) {
+  @media (max-width: $mobile-max) {
     display: none;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    width: size(207px, $tablet);
+    height: size(51px, $tablet);
+    border: size(1px, $tablet) solid $white;
   }
 
   &--mobile {
     display: none;
 
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
       display: block;
       box-sizing: border-box;
       line-height: size(15px, $mobile);
@@ -94,13 +115,19 @@
   line-height: size(26px, $desktop);
   width: size(200px, $desktop);
 
-  @media (max-width: 425px) {
+  @media (max-width: $mobile-max) {
     line-height: size(26px, $mobile);
     font-size: size(15px, $mobile);
     width: size(340px, $mobile);
     height: size(51px, $mobile);
     top: size(50px, $mobile);
     position: relative;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    font-size: size(13px, $tablet);
+    line-height: size(20px, $tablet);
+    width: size(150px, $tablet);
   }
 }
 
@@ -115,6 +142,11 @@
   line-height: size(18px, $desktop);
   box-shadow: 0 size(5px, $desktop) size(15px, $desktop)
     rgba(227, 184, 115, 0.15);
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      margin-top: size(12px, $tablet);
+      width: size(150px, $tablet);
+    }
 }
 
 .contact__form-submit {
@@ -126,22 +158,26 @@
   box-shadow: 0 size(5px, $desktop) size(20px, $desktop)
     rgba(227, 184, 115, 0.1);
 
-    @media (max-width: 425px) {
-      line-height: size(26px, $mobile);
-      font-size: size(15px, $mobile);
-      width: size(340px, $mobile);
-      height: size(51px, $mobile);
-      top: 0;
-      left: 0;
-      margin: size(67.33px, $mobile) auto size(46px, $mobile);
-    }    
+  @media (max-width: $mobile-max) {
+    line-height: size(26px, $mobile);
+    font-size: size(15px, $mobile);
+    width: size(340px, $mobile);
+    height: size(51px, $mobile);
+    top: 0;
+    left: 0;
+    margin: size(67.33px, $mobile) auto size(46px, $mobile);
+  }
 }
 
 .footer__call {
   width: size(161px, $desktop);
   height: size(37px, $desktop);
 
-  @media (max-width: 425px) {
+  @media (max-width: $mobile-max) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
     display: none;
   }
 }

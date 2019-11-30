@@ -12,8 +12,18 @@
     $white 100%
   );
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobile-max) {
     background: $black;
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    background-image: linear-gradient(
+      to bottom,
+      $black,
+      $black 55%,
+      $white 55%,
+      $white 100%
+    );
   }
 
   &__heading {
@@ -27,45 +37,44 @@
     color: $white;
     padding-top: size(95.15px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(22px, $mobile);
       line-height: 138.6%;
       margin-top: size(-100px, $mobile);
       margin-bottom: size(12.53px, $mobile);
     }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(22px, $tablet);
+      line-height: 138.6%;
+    }
   }
 
   &__picto {
     display: flex;
-    width: size(114px, $desktop);
-    margin: size(15px, $desktop) auto;
+    width: 114px;
+    margin: 15px auto;
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (max-width: 425px) {
-      width: size(114px, $mobile);
-      height: size(29px, $mobile);
+    @media screen and (max-width: $mobile-max) {
+      height: 29px;
     }
 
     &-img {
-      width: size(32px, $desktop);
-      height: size(32px, $desktop);
+      width: 32px;
+      height: 32px;
 
-      @media screen and (max-width: 425px) {
-        width: size(29px, $mobile);
-        height: size(29px, $mobile);
-      }      
+      @media screen and (max-width: $mobile-max) {
+        width: 29px;
+        height: 29px;
+      }
     }
 
     &-stick {
       background: $yellow;
-      width: size(32px, $desktop);
-      height: size(1.54px, $desktop);
-
-      @media screen and (max-width: 425px) {
-        width: size(114px, $mobile);
-        height: size(1.54px, $mobile);
-      }
+      width: 32px;
+      height: 1.54px;
     }
   }
 
@@ -78,11 +87,16 @@
 
     color: $white;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(15px, $mobile);
       line-height: 135.84%;
       margin-top: size(23.47px, $mobile);
       margin-bottom: size(76px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(15px, $tablet);
+      line-height: 135.84%;
     }
   }
 
@@ -92,8 +106,13 @@
     justify-content: space-between;
     margin: 0 auto;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: block;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 85%;
+      margin-top: 8%;
     }
   }
 
@@ -107,14 +126,21 @@
     height: size(70px, $desktop);
     padding: size(13px, $desktop);
     background: $yellow;
-    box-shadow: 0 size(5px, $desktop) size(20px, $desktop) rgba(227, 184, 115, 0.5);
+    box-shadow: 0 5px 20px rgba(227, 184, 115, 0.5);
     top: -9%;
     left: -13%;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       width: size(70px, $mobile);
       height: size(70px, $mobile);
       top: 2%;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(60px, $tablet);
+      height: size(60px, $tablet);
+      left: -15%;
+      top: -10%;
     }
   }
 
@@ -122,10 +148,15 @@
     width: size(272.24px, $desktop);
     height: size(357.63px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       width: size(304px, $mobile);
       height: size(414px, $mobile);
       margin-top: size(50px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(182.4px, $tablet);
+      height: size(248.4px, $tablet);
     }
   }
 
@@ -137,11 +168,15 @@
     height: size(137px, $desktop);
     background: $white;
     box-shadow: 0 size(10px, $desktop) size(15px, $desktop) rgba(0, 0, 0, 0.05);
-  
-    @media screen and (max-width: 425px) {
+
+    @media screen and (max-width: $mobile-max) {
       width: size(233px, $mobile);
       height: size(137px, $mobile);
       top: size(-100px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: 86%;
     }
   }
 
@@ -156,10 +191,15 @@
 
     color: #181818;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(18px, $mobile);
       line-height: size(25px, $mobile);
       padding-top: size(22px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(14px, $tablet);
+      line-height: size(25px, $tablet);
     }
   }
 
@@ -172,11 +212,17 @@
 
     color: #959595;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(18px, $mobile);
       line-height: size(26px, $mobile);
       margin-top: size(9px, $mobile);
       margin-bottom: size(24px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(12px, $tablet);
+      line-height: size(25px, $tablet);
+      margin-top: 0;
     }
   }
   &__experience {
@@ -193,7 +239,7 @@
 
     color: $white;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       width: size(233px, $mobile);
       height: size(44px, $mobile);
       font-size: size(13px, $mobile);
@@ -201,16 +247,27 @@
       padding-top: size(13px, $mobile);
       margin-bottom: size(111px, $mobile);
     }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(8px, $tablet);
+      line-height: size(20px, $tablet);
+      margin-top: 0;
+      height: size(29px, $tablet);
+    }
   }
 
   &__stick--btm {
     background: $yellow;
-    width: size(32px, $desktop);
-    height: size(1.5px, $desktop);
-    margin: 0 auto size(17.29px, $desktop);
+    width: 32px;
+    height: 1.5px;
+    margin: 0 auto 17.29px;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      margin-top: 2%;
     }
   }
 
@@ -223,8 +280,13 @@
 
     color: #363636;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(12px, $tablet);
+      line-height: size(16px, $tablet);
     }
   }
 }

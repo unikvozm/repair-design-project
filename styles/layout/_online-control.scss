@@ -13,8 +13,18 @@
     $white 100%
   );
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobile-max) {
     background: $black;
+  }
+  
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    background-image: linear-gradient(
+      to bottom,
+      $black,
+      $black 35.5%,
+      $white 35.5%,
+      $white 100%
+    );
   }
 
   &__heading {
@@ -28,43 +38,35 @@
     color: $white;
     margin-bottom: size(12.79px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(22px, $mobile);
       line-height: 138.6%;
       margin-bottom: size(19.79px, $mobile);
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(22px, $tablet);
+      line-height: 138.6%;
+      margin-bottom: size(12.79px, $tablet);
     }
   }
 
   &__picto {
     display: flex;
-    width: size(116px, $desktop);
-    margin: 0 auto size(31.21px, $desktop);
+    width: 116px;
+    margin: 0 auto 31.21px;
     align-items: center;
     justify-content: space-between;
-   
-    @media screen and (max-width: 425px) {
-      width: size(116px, $mobile);
-     }
      
     &-stick {
       background: $yellow;
-      width: size(32px, $desktop);
-      height: size(1.54px, $desktop);
-
-      @media screen and (max-width: 425px) {
-        width: size(32px, $mobile);
-        height: size(1.54px, $mobile);
-      }
+      width: 32px;
+      height: 1.54px;
     }
 
     &-icon {
-      width: size(32.77px, $desktop);
-      height: size(28px, $desktop);
-
-      @media screen and (max-width: 425px) {
-        width: size(32.77px, $mobile);
-        height: size(28px, $mobile);
-      }
+      width: 32.77px;
+      height: 28px;
     }
   }
 
@@ -74,7 +76,7 @@
     left: 0;
     top: size(-165px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
     }
 
@@ -88,7 +90,7 @@
     width: size(817px, $desktop);
     height: size(434px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       width: size(340px, $mobile);
       height: size(207px, $mobile);
       margin-top: size(40.21px, $mobile);
@@ -98,14 +100,11 @@
   &__stick-btm {
     margin: size(62.5px, $desktop) auto size(34.46px, $desktop);
     background: $yellow;
-    width: size(55px, $desktop);
-    min-width: 55px;
-    height: size(1.54px, $desktop);
+    width: 55px;
+    height: 1.54px;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       margin: size(28px, $mobile) auto size(21.46px, $mobile);
-      height: size(1.54px, $mobile);
-      width: size(55px, $mobile);
     }
   }
 
@@ -118,11 +117,18 @@
 
     color: #363636;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       color: $white;
       font-size: size(14px, $mobile);
       line-height: 169.8%;
       width: size(340px, $mobile);
+      margin: 0 auto;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(14px, $tablet);
+      line-height: 169.8%;
+      width: 62%;
       margin: 0 auto;
     }
   }

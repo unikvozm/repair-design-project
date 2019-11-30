@@ -13,11 +13,18 @@
   font-size: size(14px, $desktop);
   line-height: size(16px, $desktop);
 
-  @media (max-width: 425px) {
+  @media (max-width: $mobile-max) {
     font-size: size(12px, $mobile);
     line-height: size(14px, $mobile);
     padding: size(23px, $mobile) size(18px, $mobile) size(24px, $mobile)
     size(18px, $mobile);
+  }
+
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    font-size: size(12px, $tablet);
+    line-height: size(14px, $tablet);
+    padding: size(23px, $tablet) size(18px, $tablet) size(24px, $tablet)
+    size(18px, $tablet);
   }
 
   &__heading {
@@ -29,15 +36,19 @@
     color: $yellow;
     font-family: $futuraDemiC;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       color: $white;
     }
   }
 
   &__call {
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
       text-decoration: none;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      display: none;
     }
   }
 
@@ -46,8 +57,12 @@
     justify-content: space-between;
     width: size(581.43px, $desktop);
   
-    @media (max-width: 425px) {
+    @media (max-width: $mobile-max) {
       display: none;
+    }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      width: size(380px, $tablet);
     }
     
     &-item {
@@ -62,6 +77,7 @@
       &--active {
         text-decoration: none;
         color: $yellow;
+        
         &:hover {
           text-decoration: underline;
         }

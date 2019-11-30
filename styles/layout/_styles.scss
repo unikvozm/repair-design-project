@@ -11,7 +11,7 @@
   align-content: center;
   height: size(864px, $desktop);
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $mobile-max) {
     display: block;
     background-image: linear-gradient(
       to bottom,
@@ -24,7 +24,7 @@
   }
 
   &__ul {
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
     }
   }
@@ -33,7 +33,7 @@
     width: size(511px, $desktop);
     margin-left: size(100px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       width: 100%;
       margin: 0;
     }
@@ -42,14 +42,14 @@
   &__block2 {
     width: size(400px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
     }
   }
   &__block3 {
     width: size(400px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
     }
   }
@@ -65,7 +65,7 @@
     color: $yellow;
     margin-bottom: 10%;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       font-size: size(22px, $mobile);
       line-height: 138.6%;
       width: size(340px, $mobile);
@@ -73,22 +73,41 @@
       text-align: center;
       margin-bottom: size(24px, $mobile);
     }
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(22px, $tablet);
+      line-height: 138.6%;
+    }
   }
 
   &__li {
-    font-family: "Proxima Nova";
+    font-family: $proxima;
     font-size: size(20px, $desktop);
     line-height: size(34px, $desktop);
 
     color: $white;
 
+    cursor: pointer;
+
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+      font-size: size(16px, $tablet);
+      line-height: 160%;
+    }
+
     &--selected {
-      font-family: "Proxima Nova";
+      font-family: $proxima;
       font-size: size(20px, $desktop);
       line-height: size(34px, $desktop);
 
       color: $yellow;
       text-decoration: underline;
+
+      cursor: pointer;
+
+      @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        font-size: size(16px, $tablet);
+        line-height: 160%;
+      }
     }
   }
 
@@ -98,7 +117,7 @@
     width: size(354.81px, $desktop);
     height: size(556.86px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
     }
   }
@@ -110,7 +129,7 @@
     height: size(349.47px, $desktop);
     margin-bottom: size(112.47px, $desktop);
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: none;
     }
   }
@@ -132,7 +151,7 @@
   &__slider {
     display: none;
 
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $mobile-max) {
       display: block;
       position: relative;
     }
@@ -151,7 +170,7 @@
         opacity: 0.7;
       }
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         width: size(36px, $mobile);
         height: size(36px, $mobile);
         left: 80%;
@@ -175,7 +194,7 @@
         opacity: 0.7;
       }
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $mobile-max) {
         display: inline;
         width: size(36px, $mobile);
         height: size(36px, $mobile);
